@@ -30,7 +30,7 @@ namespace MID.DL
             Connection.Close();
             return Table;
         }
-        public int SetData(string query)
+        public int ExecuteCommand(string query)
         {
             if (Connection.State == ConnectionState.Closed)
                 Connection.Open();
