@@ -30,13 +30,17 @@ namespace MID.DL
             Connection.Close();
             return Table;
         }
-        public int ExecuteCommand(string query)
+        public bool ExecuteCommand(string query)
         {
             if (Connection.State == ConnectionState.Closed)
                 Connection.Open();
             Command = new SqlCommand(query, Connection);
+            int RowsAffected = Command.ExecuteNonQuery();
             Connection.Close();
-            return Command.ExecuteNonQuery();
+            if (RowsAffected > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
