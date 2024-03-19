@@ -10,10 +10,10 @@ namespace MID.DL
     internal class StudentDL
     {
         private static DBConfig DBConfig = new DBConfig();
+        private static string GetAllDataQuery = "SELECT s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber,l.Name as Status FROM Student s JOIN Lookup l ON s.Status = l.LookupId ORDER BY s.FirstName ASC";
         public static DataTable GetStudentData()
         {
-            string query = "SELECT s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber,l.Name as Status FROM Student s JOIN Lookup l ON s.Status = l.LookupId ORDER BY s.FirstName ASC";
-            return DBConfig.GetData(query);
+            return DBConfig.GetData(GetAllDataQuery);
         }
         private static string GetStatusId(bool Active)
         {
@@ -47,19 +47,21 @@ namespace MID.DL
             query = query.Replace("@RegNo", RegistrationNumber);
             return DBConfig.ExecuteCommand(query);
         }
-        public static bool UpdateStudent(string FirstName, string LastName, string Contact, string Email, string RegNo)
+        public static bool UpdateStudent(string FirstName, string LastName, string Contact, string Email, string RegNo, bool IsActive)
         {
-            string query = "UPDATE Student SET FirstName = '@FirstName', LastName = '@LastName', Contact = '@Contact', Email = '@Email' WHERE RegistrationNumber = '@RegNo'";
+            string StatusId = GetStatusId(IsActive);
+            string query = "UPDATE Student SET FirstName = '@FirstName', LastName = '@LastName', Contact = '@Contact', Email = '@Email', Status = '@StatusId' WHERE RegistrationNumber = '@RegNo'";
             query = query.Replace("@FirstName", FirstName);
             query = query.Replace("@LastName", LastName);
             query = query.Replace("@Contact", Contact);
             query = query.Replace("@Email", Email);
             query = query.Replace("@RegNo", RegNo);
+            query = query.Replace("@StatusId", StatusId);
             return DBConfig.ExecuteCommand(query);
         }
         public static DataTable SearchStudent(string RegistrationNumber)
         {
-            string query = "SELECT * FROM Student WHERE RegistrationNumber = '@RegNo'";
+            string query = GetAllDataQuery + " WHERE s.RegistrationNumber = '@RegNo'";
             query = query.Replace("@RegNo", RegistrationNumber);
             return DBConfig.GetData(query);
         }
