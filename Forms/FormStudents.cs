@@ -16,6 +16,12 @@ namespace sample.Forms
         public FormStudents()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            DataTable dt = StudentDL.GetStudentData();
+            dataGridView1.DataSource = dt;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -51,7 +57,7 @@ namespace sample.Forms
             {
                 MessageBox.Show("Failed to Add Student");
             }
-
+            LoadData();
         }
 
         private void UPDATEST_Click(object sender, EventArgs e)
@@ -75,6 +81,7 @@ namespace sample.Forms
             {
                 MessageBox.Show("Failed to Update Student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            LoadData();
         }
 
         private void DELETEST_Click(object sender, EventArgs e)
@@ -97,6 +104,7 @@ namespace sample.Forms
             {
                 MessageBox.Show("Failed to Delete Student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            LoadData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
