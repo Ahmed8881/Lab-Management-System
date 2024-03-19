@@ -9,7 +9,7 @@ namespace MID.DL
 {
     internal class StudentDL
     {
-        private static DBConfig DBConfig = new DBConfig();
+        private static DBConfig DBConfig = DBConfig.GetInstance();
         private static string GetAllDataQuery = "SELECT s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber,l.Name as Status FROM Student s JOIN Lookup l ON s.Status = l.LookupId ORDER BY s.FirstName ASC";
         public static DataTable GetStudentData()
         {
