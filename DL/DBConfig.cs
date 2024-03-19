@@ -11,19 +11,37 @@ namespace MID.DL
 {
     internal class DBConfig
     {
+        private DBConfig Instance;
         private string ConnectionString = "Data Source=localhost\\SQLEXPRESS;database=ProjectB;Integrated Security=True";
         private SqlConnection Connection;
         private SqlCommand Command;
         private SqlDataAdapter Adapter;
         private DataTable Table;
-        public DBConfig()
+        private DBConfig()
         {
             Connection = new SqlConnection(ConnectionString);
         }
-        public DataTable GetData(string query)
+        public DBConfig GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new DBConfig();
+            }
+            return Instance;
+        }
+        public void OpenConnection()
         {
             if (Connection.State == ConnectionState.Closed)
                 Connection.Open();
+        }
+        public void CloseConnection()
+        {
+            if (Connection.State == ConnectionState.Open)
+                Connection.Close();
+        }
+        public DataTable GetData(string query)
+        {
+            OpenConnection();
             Adapter = new SqlDataAdapter(query, Connection);
             Table = new DataTable();
             Adapter.Fill(Table);
@@ -37,10 +55,11 @@ namespace MID.DL
             Command = new SqlCommand(query, Connection);
             int RowsAffected = Command.ExecuteNonQuery();
             Connection.Close();
-            if (RowsAffected > 0)
-                return true;
-            else
-                return false;
+            return RowsAffected > 0;
+        }
+        public SqlConnection GetConnection()
+        {
+            return Connection;
         }
     }
 }
