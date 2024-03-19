@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MID
+namespace sample.Forms
 {
-    public partial class Assessment : Form
+    public partial class ASSESSMENTS : Form
     {
-        public Assessment()
+        public ASSESSMENTS()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

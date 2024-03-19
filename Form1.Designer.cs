@@ -1,4 +1,4 @@
-﻿namespace MID
+﻿namespace sample
 {
     partial class Form1
     {
@@ -28,262 +28,307 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            colorDialog1 = new ColorDialog();
-            panel1 = new Panel();
-            panel8 = new Panel();
-            label10 = new Label();
-            panel7 = new Panel();
-            label9 = new Label();
-            panel6 = new Panel();
-            label8 = new Label();
-            panel5 = new Panel();
-            label7 = new Label();
-            panel4 = new Panel();
-            label6 = new Label();
-            panel3 = new Panel();
-            label5 = new Label();
-            panel2 = new Panel();
-            label4 = new Label();
+            panelMenu = new Panel();
+            button6 = new Button();
+            Attendence = new Button();
+            Result = new Button();
+            Assessment = new Button();
+            Rubric = new Button();
+            CLO = new Button();
+            Student = new Button();
+            panelLogo = new Panel();
+            panelTitleBar = new Panel();
+            lblTitle = new Label();
+            panelDesktopPanel = new Panel();
             pictureBox1 = new PictureBox();
-            errorProvider1 = new ErrorProvider(components);
-            panel1.SuspendLayout();
-            panel8.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            label3 = new Label();
+            label2 = new Label();
+            A = new Button();
+            panelMenu.SuspendLayout();
+            panelTitleBar.SuspendLayout();
+            panelDesktopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            panel1.BackColor = Color.FromArgb(128, 128, 255);
-            panel1.Controls.Add(panel8);
-            panel1.Controls.Add(panel7);
-            panel1.Controls.Add(panel6);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(229, 740);
-            panel1.TabIndex = 0;
+            panelMenu.BackColor = Color.FromArgb(51, 51, 76);
+            panelMenu.Controls.Add(A);
+            panelMenu.Controls.Add(button6);
+            panelMenu.Controls.Add(Attendence);
+            panelMenu.Controls.Add(Result);
+            panelMenu.Controls.Add(Assessment);
+            panelMenu.Controls.Add(Rubric);
+            panelMenu.Controls.Add(CLO);
+            panelMenu.Controls.Add(Student);
+            panelMenu.Controls.Add(panelLogo);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(220, 668);
+            panelMenu.TabIndex = 0;
             // 
-            // panel8
+            // button6
             // 
-            panel8.BackColor = Color.WhiteSmoke;
-            panel8.Controls.Add(label10);
-            panel8.Location = new Point(3, 555);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(217, 48);
-            panel8.TabIndex = 4;
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.Gainsboro;
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.ImageAlign = ContentAlignment.MiddleLeft;
+            button6.Location = new Point(0, 400);
+            button6.Name = "button6";
+            button6.Padding = new Padding(12, 0, 0, 0);
+            button6.Size = new Size(220, 0);
+            button6.TabIndex = 7;
+            button6.Text = "  Reports";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button6.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // Attendence
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.FromArgb(128, 128, 255);
-            label10.Location = new Point(64, 16);
-            label10.Name = "label10";
-            label10.Size = new Size(103, 32);
-            label10.TabIndex = 1;
-            label10.Text = "Reports";
+            Attendence.Dock = DockStyle.Top;
+            Attendence.FlatAppearance.BorderSize = 0;
+            Attendence.FlatStyle = FlatStyle.Flat;
+            Attendence.ForeColor = Color.Gainsboro;
+            Attendence.Image = Properties.Resources.sss;
+            Attendence.ImageAlign = ContentAlignment.MiddleLeft;
+            Attendence.Location = new Point(0, 336);
+            Attendence.Name = "Attendence";
+            Attendence.Padding = new Padding(12, 0, 0, 0);
+            Attendence.Size = new Size(220, 64);
+            Attendence.TabIndex = 6;
+            Attendence.Text = "Attendence";
+            Attendence.TextAlign = ContentAlignment.MiddleLeft;
+            Attendence.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Attendence.UseVisualStyleBackColor = true;
+            Attendence.Click += Attendence_Click;
             // 
-            // panel7
+            // Result
             // 
-            panel7.BackColor = Color.WhiteSmoke;
-            panel7.Controls.Add(label9);
-            panel7.Location = new Point(3, 501);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(217, 48);
-            panel7.TabIndex = 3;
+            Result.Dock = DockStyle.Top;
+            Result.FlatAppearance.BorderSize = 0;
+            Result.FlatStyle = FlatStyle.Flat;
+            Result.ForeColor = Color.Gainsboro;
+            Result.Image = (Image)resources.GetObject("Result.Image");
+            Result.ImageAlign = ContentAlignment.MiddleLeft;
+            Result.Location = new Point(0, 272);
+            Result.Name = "Result";
+            Result.Padding = new Padding(12, 0, 0, 0);
+            Result.Size = new Size(220, 64);
+            Result.TabIndex = 5;
+            Result.Text = "   Result";
+            Result.TextAlign = ContentAlignment.MiddleLeft;
+            Result.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Result.UseVisualStyleBackColor = true;
+            Result.Click += Result_Click;
             // 
-            // label9
+            // Assessment
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.FromArgb(128, 128, 255);
-            label9.Location = new Point(47, 16);
-            label9.Name = "label9";
-            label9.Size = new Size(145, 32);
-            label9.TabIndex = 1;
-            label9.Text = "Attendence";
+            Assessment.FlatAppearance.BorderSize = 0;
+            Assessment.FlatStyle = FlatStyle.Flat;
+            Assessment.ForeColor = Color.Gainsboro;
+            Assessment.Image = (Image)resources.GetObject("Assessment.Image");
+            Assessment.ImageAlign = ContentAlignment.MiddleLeft;
+            Assessment.Location = new Point(0, 272);
+            Assessment.Name = "Assessment";
+            Assessment.Padding = new Padding(12, 0, 0, 0);
+            Assessment.Size = new Size(220, 64);
+            Assessment.TabIndex = 4;
+            Assessment.Text = "Assessment";
+            Assessment.TextAlign = ContentAlignment.MiddleLeft;
+            Assessment.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Assessment.UseVisualStyleBackColor = true;
+           
             // 
-            // panel6
+            // Rubric
             // 
-            panel6.BackColor = Color.WhiteSmoke;
-            panel6.Controls.Add(label8);
-            panel6.Location = new Point(3, 447);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(217, 48);
-            panel6.TabIndex = 3;
+            Rubric.Dock = DockStyle.Top;
+            Rubric.FlatAppearance.BorderSize = 0;
+            Rubric.FlatStyle = FlatStyle.Flat;
+            Rubric.ForeColor = Color.Gainsboro;
+            Rubric.Image = (Image)resources.GetObject("Rubric.Image");
+            Rubric.ImageAlign = ContentAlignment.MiddleLeft;
+            Rubric.Location = new Point(0, 208);
+            Rubric.Name = "Rubric";
+            Rubric.Padding = new Padding(12, 0, 0, 0);
+            Rubric.Size = new Size(220, 64);
+            Rubric.TabIndex = 3;
+            Rubric.Text = "  Rubric";
+            Rubric.TextAlign = ContentAlignment.MiddleLeft;
+            Rubric.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Rubric.UseVisualStyleBackColor = true;
+            Rubric.Click += Rubric_Click;
             // 
-            // label8
+            // CLO
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(128, 128, 255);
-            label8.Location = new Point(73, 16);
-            label8.Name = "label8";
-            label8.Size = new Size(84, 32);
-            label8.TabIndex = 1;
-            label8.Text = "Result";
+            CLO.Dock = DockStyle.Top;
+            CLO.FlatAppearance.BorderSize = 0;
+            CLO.FlatStyle = FlatStyle.Flat;
+            CLO.ForeColor = Color.Gainsboro;
+            CLO.Image = (Image)resources.GetObject("CLO.Image");
+            CLO.ImageAlign = ContentAlignment.MiddleLeft;
+            CLO.Location = new Point(0, 144);
+            CLO.Name = "CLO";
+            CLO.Padding = new Padding(12, 0, 0, 0);
+            CLO.Size = new Size(220, 64);
+            CLO.TabIndex = 2;
+            CLO.Text = "    CLO";
+            CLO.TextAlign = ContentAlignment.MiddleLeft;
+            CLO.TextImageRelation = TextImageRelation.ImageBeforeText;
+            CLO.UseVisualStyleBackColor = true;
+            CLO.Click += CLO_Click;
             // 
-            // panel5
+            // Student
             // 
-            panel5.BackColor = Color.WhiteSmoke;
-            panel5.Controls.Add(label7);
-            panel5.Cursor = Cursors.Hand;
-            panel5.Location = new Point(3, 393);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(217, 48);
-            panel5.TabIndex = 2;
+            Student.Dock = DockStyle.Top;
+            Student.FlatAppearance.BorderSize = 0;
+            Student.FlatStyle = FlatStyle.Flat;
+            Student.ForeColor = Color.Gainsboro;
+            Student.Image = Properties.Resources.sss;
+            Student.ImageAlign = ContentAlignment.MiddleLeft;
+            Student.Location = new Point(0, 80);
+            Student.Name = "Student";
+            Student.Padding = new Padding(12, 0, 0, 0);
+            Student.Size = new Size(220, 64);
+            Student.TabIndex = 0;
+            Student.Text = "Students";
+            Student.TextAlign = ContentAlignment.MiddleLeft;
+            Student.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Student.UseVisualStyleBackColor = true;
+            Student.Click += Student_Click;
             // 
-            // label7
+            // panelLogo
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(128, 128, 255);
-            label7.Location = new Point(45, 16);
-            label7.Name = "label7";
-            label7.Size = new Size(147, 32);
-            label7.TabIndex = 1;
-            label7.Text = "Assessment";
-            label7.Click += label7_Click;
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(220, 80);
+            panelLogo.TabIndex = 1;
             // 
-            // panel4
+            // panelTitleBar
             // 
-            panel4.BackColor = Color.WhiteSmoke;
-            panel4.Controls.Add(label6);
-            panel4.Location = new Point(3, 339);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(217, 48);
-            panel4.TabIndex = 2;
+            panelTitleBar.BackColor = Color.RoyalBlue;
+            panelTitleBar.Controls.Add(lblTitle);
+            panelTitleBar.Dock = DockStyle.Top;
+            panelTitleBar.Location = new Point(220, 0);
+            panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.Size = new Size(632, 80);
+            panelTitleBar.TabIndex = 1;
             // 
-            // label6
+            // lblTitle
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(128, 128, 255);
-            label6.Location = new Point(64, 16);
-            label6.Name = "label6";
-            label6.Size = new Size(89, 32);
-            label6.TabIndex = 1;
-            label6.Text = "Rubric";
+            lblTitle.Anchor = AnchorStyles.None;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 16F);
+            lblTitle.ForeColor = SystemColors.ControlLightLight;
+            lblTitle.Location = new Point(242, 23);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(112, 37);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "HOME";
             // 
-            // panel3
+            // panelDesktopPanel
             // 
-            panel3.BackColor = Color.WhiteSmoke;
-            panel3.Controls.Add(label5);
-            panel3.Location = new Point(3, 285);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(217, 48);
-            panel3.TabIndex = 2;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(128, 128, 255);
-            label5.Location = new Point(74, 16);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 32);
-            label5.TabIndex = 1;
-            label5.Text = "CLO";
-            label5.Click += label5_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.WhiteSmoke;
-            panel2.Controls.Add(label4);
-            panel2.Location = new Point(3, 231);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(217, 48);
-            panel2.TabIndex = 1;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(128, 128, 255);
-            label4.Location = new Point(55, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(102, 32);
-            label4.TabIndex = 0;
-            label4.Text = "Student";
-            label4.Click += label4_Click;
+            panelDesktopPanel.Controls.Add(pictureBox1);
+            panelDesktopPanel.Controls.Add(label3);
+            panelDesktopPanel.Controls.Add(label2);
+            panelDesktopPanel.Dock = DockStyle.Fill;
+            panelDesktopPanel.Location = new Point(220, 80);
+            panelDesktopPanel.Name = "panelDesktopPanel";
+            panelDesktopPanel.Size = new Size(632, 588);
+            panelDesktopPanel.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Black;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Image = Properties.Resources.st;
+            pictureBox1.Location = new Point(195, 64);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(225, 225);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 0;
+            pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // errorProvider1
+            // label3
             // 
-            errorProvider1.ContainerControl = this;
+            label3.AutoSize = true;
+            label3.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = SystemColors.InactiveCaptionText;
+            label3.Location = new Point(213, 384);
+            label3.Name = "label3";
+            label3.Size = new Size(160, 44);
+            label3.TabIndex = 1;
+            label3.Text = "SYSTEM";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold | FontStyle.Italic);
+            label2.ForeColor = SystemColors.InactiveCaptionText;
+            label2.Location = new Point(147, 320);
+            label2.Name = "label2";
+            label2.Size = new Size(327, 44);
+            label2.TabIndex = 0;
+            label2.Text = "LAB MANAGMENT ";
+            // 
+            // A
+            // 
+            A.Dock = DockStyle.Top;
+            A.FlatAppearance.BorderSize = 0;
+            A.FlatStyle = FlatStyle.Flat;
+            A.ForeColor = Color.Gainsboro;
+            A.Image = (Image)resources.GetObject("A.Image");
+            A.ImageAlign = ContentAlignment.MiddleLeft;
+            A.Location = new Point(0, 400);
+            A.Name = "A";
+            A.Padding = new Padding(12, 0, 0, 0);
+            A.Size = new Size(220, 64);
+            A.TabIndex = 8;
+            A.Text = "ASSESSMENT";
+            A.TextAlign = ContentAlignment.MiddleLeft;
+            A.TextImageRelation = TextImageRelation.ImageBeforeText;
+            A.UseVisualStyleBackColor = true;
+            A.Click += A_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
-            ClientSize = new Size(1002, 743);
-            Controls.Add(panel1);
+            ClientSize = new Size(852, 668);
+            Controls.Add(panelDesktopPanel);
+            Controls.Add(panelTitleBar);
+            Controls.Add(panelMenu);
             Name = "Form1";
             Text = "Form1";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelMenu.ResumeLayout(false);
+            panelTitleBar.ResumeLayout(false);
+            panelTitleBar.PerformLayout();
+            panelDesktopPanel.ResumeLayout(false);
+            panelDesktopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ColorDialog colorDialog1;
-        private Panel panel1;
-        private ErrorProvider errorProvider1;
+        private Panel panelMenu;
+        private Panel panelLogo;
+        private Button Student;
+        private Button button6;
+        private Button Attendence;
+        private Button Result;
+        private Button Assessment;
+        private Button Rubric;
+        private Button CLO;
+        private Panel panelTitleBar;
+        private Label lblTitle;
+        private Panel panelDesktopPanel;
+        private Label label2;
+        private Label label3;
         private PictureBox pictureBox1;
-        private Panel panel5;
-        private Panel panel4;
-        private Panel panel3;
-        private Panel panel2;
-        private Panel panel8;
-        private Panel panel7;
-        private Panel panel6;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
+        private Button A;
     }
 }

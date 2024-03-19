@@ -8,27 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MID
+namespace sample.Forms
 {
-    public partial class CLOS : Form
+    public partial class RUBRICS : Form
     {
-        private Form1 _sidebar;
-        public CLOS()
+        public RUBRICS()
         {
             InitializeComponent();
-
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cxcx_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

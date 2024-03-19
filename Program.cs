@@ -1,4 +1,4 @@
-namespace MID
+namespace sample
 {
     internal static class Program
     {
