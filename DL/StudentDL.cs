@@ -12,17 +12,33 @@ namespace MID.DL
         private static DBConfig DBConfig = new DBConfig();
         public static DataTable GetStudentData()
         {
-            string query = "SELECT * FROM Student";
+            string query = "SELECT s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber,l.Name as Status FROM Student s JOIN Lookup l ON s.Status = l.LookupId ORDER BY s.FirstName ASC";
             return DBConfig.GetData(query);
         }
-        public static bool AddStudent(string FirstName, string LastName, string Contact, string Email, string RegNo)
+        private static string GetStatusId(bool Active)
         {
-            string query = "Insert into Student(FirstName, LastName, Contact, Email, RegistrationNumber) values('@FirstName', '@LastName', '@Contact', '@Email', '@RegNo')";
+            string StatusQuery = "SELECT LookupId FROM Lookup WHERE Name = '@Active'";
+            if (Active)
+            {
+                StatusQuery = StatusQuery.Replace("@Active", "Active");
+            }
+            else
+            {
+                StatusQuery = StatusQuery.Replace("@Active", "InActive");
+            }
+            DataTable dt = DBConfig.GetData(StatusQuery);
+            return dt.Rows[0]["LookupId"].ToString();
+        }
+        public static bool AddStudent(string FirstName, string LastName, string Contact, string Email, string RegNo, bool Active)
+        {
+            string StatusId = GetStatusId(Active);
+            string query = "Insert into Student(FirstName, LastName, Contact, Email, RegistrationNumber, Status) values('@FirstName', '@LastName', '@Contact', '@Email', '@RegNo', '@StatusId')";
             query = query.Replace("@FirstName", FirstName);
             query = query.Replace("@LastName", LastName);
             query = query.Replace("@Contact", Contact);
             query = query.Replace("@Email", Email);
             query = query.Replace("@RegNo", RegNo);
+            query = query.Replace("@StatusId", StatusId);
             return DBConfig.ExecuteCommand(query);
         }
         public static bool DeleteStudent(string RegistrationNumber)
