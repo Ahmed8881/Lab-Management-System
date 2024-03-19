@@ -28,21 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DELETEST = new Button();
             UPDATEST = new Button();
             ADDBUTTON = new Button();
             RegNumber = new Label();
             Name = new Label();
             LastName = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            RegNum = new TextBox();
+            FirstName = new TextBox();
+            LastNames = new TextBox();
             label4 = new Label();
             dataGridView1 = new DataGridView();
+            RegNo = new DataGridViewTextBoxColumn();
+            n1 = new DataGridViewTextBoxColumn();
+            n2 = new DataGridViewTextBoxColumn();
+            emai = new DataGridViewTextBoxColumn();
+            phone = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
             Email = new Label();
             PhoneNo = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            emails = new TextBox();
+            Contactno = new TextBox();
             label7 = new Label();
             StatusCheckBox = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -54,12 +62,13 @@
             DELETEST.BackColor = SystemColors.MenuHighlight;
             DELETEST.FlatStyle = FlatStyle.Flat;
             DELETEST.ForeColor = SystemColors.ControlLightLight;
-            DELETEST.Location = new Point(725, 537);
+            DELETEST.Location = new Point(1223, 537);
             DELETEST.Name = "DELETEST";
             DELETEST.Size = new Size(97, 58);
             DELETEST.TabIndex = 0;
             DELETEST.Text = "DELETE";
             DELETEST.UseVisualStyleBackColor = false;
+            DELETEST.Click += DELETEST_Click;
             // 
             // UPDATEST
             // 
@@ -67,12 +76,13 @@
             UPDATEST.BackColor = SystemColors.MenuHighlight;
             UPDATEST.FlatStyle = FlatStyle.Flat;
             UPDATEST.ForeColor = SystemColors.ControlLightLight;
-            UPDATEST.Location = new Point(588, 537);
+            UPDATEST.Location = new Point(1086, 537);
             UPDATEST.Name = "UPDATEST";
             UPDATEST.Size = new Size(97, 58);
             UPDATEST.TabIndex = 1;
             UPDATEST.Text = "UPDATE";
             UPDATEST.UseVisualStyleBackColor = false;
+            UPDATEST.Click += UPDATEST_Click;
             // 
             // ADDBUTTON
             // 
@@ -80,12 +90,13 @@
             ADDBUTTON.BackColor = SystemColors.MenuHighlight;
             ADDBUTTON.FlatStyle = FlatStyle.Flat;
             ADDBUTTON.ForeColor = SystemColors.ControlLightLight;
-            ADDBUTTON.Location = new Point(435, 537);
+            ADDBUTTON.Location = new Point(933, 537);
             ADDBUTTON.Name = "ADDBUTTON";
             ADDBUTTON.Size = new Size(98, 58);
             ADDBUTTON.TabIndex = 2;
             ADDBUTTON.Text = "ADD";
             ADDBUTTON.UseVisualStyleBackColor = false;
+            ADDBUTTON.Click += ADDBUTTON_Click;
             // 
             // RegNumber
             // 
@@ -118,26 +129,26 @@
             LastName.TabIndex = 5;
             LastName.Text = "Last Name";
             // 
-            // textBox1
+            // RegNum
             // 
-            textBox1.Location = new Point(155, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(145, 31);
-            textBox1.TabIndex = 6;
+            RegNum.Location = new Point(155, 87);
+            RegNum.Name = "RegNum";
+            RegNum.Size = new Size(145, 31);
+            RegNum.TabIndex = 6;
             // 
-            // textBox2
+            // FirstName
             // 
-            textBox2.Location = new Point(155, 154);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(145, 31);
-            textBox2.TabIndex = 7;
+            FirstName.Location = new Point(155, 154);
+            FirstName.Name = "FirstName";
+            FirstName.Size = new Size(145, 31);
+            FirstName.TabIndex = 7;
             // 
-            // textBox3
+            // LastNames
             // 
-            textBox3.Location = new Point(155, 225);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(145, 31);
-            textBox3.TabIndex = 8;
+            LastNames.Location = new Point(155, 225);
+            LastNames.Name = "LastNames";
+            LastNames.Size = new Size(145, 31);
+            LastNames.TabIndex = 8;
             // 
             // label4
             // 
@@ -151,14 +162,64 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(229, 226, 224);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(109, 122, 224);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { RegNo, n1, n2, emai, phone, status });
             dataGridView1.Location = new Point(390, 86);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(464, 433);
+            dataGridView1.Size = new Size(962, 433);
             dataGridView1.TabIndex = 10;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // RegNo
+            // 
+            RegNo.HeaderText = "Reg Num";
+            RegNo.MinimumWidth = 8;
+            RegNo.Name = "RegNo";
+            // 
+            // n1
+            // 
+            n1.HeaderText = "First Name";
+            n1.MinimumWidth = 8;
+            n1.Name = "n1";
+            // 
+            // n2
+            // 
+            n2.HeaderText = "Last Name";
+            n2.MinimumWidth = 8;
+            n2.Name = "n2";
+            // 
+            // emai
+            // 
+            emai.HeaderText = "Email";
+            emai.MinimumWidth = 8;
+            emai.Name = "emai";
+            // 
+            // phone
+            // 
+            phone.HeaderText = "Contact";
+            phone.MinimumWidth = 8;
+            phone.Name = "phone";
+            // 
+            // status
+            // 
+            status.HeaderText = "Status";
+            status.MinimumWidth = 8;
+            status.Name = "status";
             // 
             // Email
             // 
@@ -180,19 +241,19 @@
             PhoneNo.TabIndex = 12;
             PhoneNo.Text = "Phone num";
             // 
-            // textBox4
+            // emails
             // 
-            textBox4.Location = new Point(155, 285);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(145, 31);
-            textBox4.TabIndex = 13;
+            emails.Location = new Point(155, 285);
+            emails.Name = "emails";
+            emails.Size = new Size(145, 31);
+            emails.TabIndex = 13;
             // 
-            // textBox5
+            // Contactno
             // 
-            textBox5.Location = new Point(155, 340);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(145, 31);
-            textBox5.TabIndex = 14;
+            Contactno.Location = new Point(155, 340);
+            Contactno.Name = "Contactno";
+            Contactno.Size = new Size(145, 31);
+            Contactno.TabIndex = 14;
             // 
             // label7
             // 
@@ -218,24 +279,25 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(877, 663);
+            ClientSize = new Size(1375, 663);
             Controls.Add(StatusCheckBox);
             Controls.Add(label7);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(Contactno);
+            Controls.Add(emails);
             Controls.Add(PhoneNo);
             Controls.Add(Email);
             Controls.Add(dataGridView1);
             Controls.Add(label4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(LastNames);
+            Controls.Add(FirstName);
+            Controls.Add(RegNum);
             Controls.Add(LastName);
             Controls.Add(Name);
             Controls.Add(RegNumber);
             Controls.Add(ADDBUTTON);
             Controls.Add(UPDATEST);
             Controls.Add(DELETEST);
+           
             Text = "Students";
             Load += FormStudents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -251,16 +313,22 @@
         private Label RegNumber;
         private Label Name;
         private Label LastName;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox RegNum;
+        private TextBox FirstName;
+        private TextBox LastNames;
         private Label label4;
         private DataGridView dataGridView1;
         private Label Email;
         private Label PhoneNo;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox emails;
+        private TextBox Contactno;
         private Label label7;
         private CheckBox StatusCheckBox;
+        private DataGridViewTextBoxColumn RegNo;
+        private DataGridViewTextBoxColumn n1;
+        private DataGridViewTextBoxColumn n2;
+        private DataGridViewTextBoxColumn emai;
+        private DataGridViewTextBoxColumn phone;
+        private DataGridViewTextBoxColumn status;
     }
 }
