@@ -20,10 +20,19 @@ namespace MID.DL
         {
             Connection = new SqlConnection(ConnectionString);
         }
-        public DataTable GetData(string query)
+        public void OpenConnection()
         {
             if (Connection.State == ConnectionState.Closed)
                 Connection.Open();
+        }
+        public void CloseConnection()
+        {
+            if (Connection.State == ConnectionState.Open)
+                Connection.Close();
+        }
+        public DataTable GetData(string query)
+        {
+            OpenConnection();
             Adapter = new SqlDataAdapter(query, Connection);
             Table = new DataTable();
             Adapter.Fill(Table);
@@ -37,10 +46,11 @@ namespace MID.DL
             Command = new SqlCommand(query, Connection);
             int RowsAffected = Command.ExecuteNonQuery();
             Connection.Close();
-            if (RowsAffected > 0)
-                return true;
-            else
-                return false;
+            return RowsAffected > 0;
+        }
+        public SqlConnection GetConnection()
+        {
+            return Connection;
         }
     }
 }
