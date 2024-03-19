@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace sample.Forms
 {
-    public partial class ASSESSMENTS : Form
+    public partial class Rubric_Level : Form
     {
-        public ASSESSMENTS()
+        public Rubric_Level()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
