@@ -4,7 +4,7 @@ namespace MID.DL
 {
     class CloDL
     {
-        private static DBConfig DBConfig = DBConfig.GetInstance();
+        private static DBConfig DBConfig = new DBConfig();
         private static string GetAllDataQuery = "SELECT * FROM Clo";
         public static DataTable GetCloData()
         {

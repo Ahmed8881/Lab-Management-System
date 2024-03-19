@@ -11,23 +11,14 @@ namespace MID.DL
 {
     internal class DBConfig
     {
-        private DBConfig Instance;
         private string ConnectionString = "Data Source=localhost\\SQLEXPRESS;database=ProjectB;Integrated Security=True";
         private SqlConnection Connection;
         private SqlCommand Command;
         private SqlDataAdapter Adapter;
         private DataTable Table;
-        private DBConfig()
+        public DBConfig()
         {
             Connection = new SqlConnection(ConnectionString);
-        }
-        public DBConfig GetInstance()
-        {
-            if (Instance == null)
-            {
-                Instance = new DBConfig();
-            }
-            return Instance;
         }
         public void OpenConnection()
         {
