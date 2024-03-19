@@ -34,6 +34,11 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            button2 = new Button();
+            button3 = new Button();
+            dataGridView1 = new DataGridView();
+            button4 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -45,9 +50,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(464, 324);
+            button1.Location = new Point(426, 581);
             button1.Name = "button1";
-            button1.Size = new Size(91, 36);
+            button1.Size = new Size(103, 36);
             button1.TabIndex = 2;
             button1.Text = "ADD";
             button1.UseVisualStyleBackColor = true;
@@ -87,13 +92,53 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(70, 31);
             textBox4.TabIndex = 6;
-            textBox4.Text = "Current Date";
+            textBox4.Text = " Date";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(591, 581);
+            button2.Name = "button2";
+            button2.Size = new Size(91, 36);
+            button2.TabIndex = 7;
+            button2.Text = "DELETE\r\n";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(747, 581);
+            button3.Name = "button3";
+            button3.Size = new Size(91, 36);
+            button3.TabIndex = 8;
+            button3.Text = "UPDATE\r\n";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(416, 28);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(479, 507);
+            dataGridView1.TabIndex = 9;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(76, 226);
+            button4.Name = "button4";
+            button4.Size = new Size(311, 36);
+            button4.TabIndex = 10;
+            button4.Text = "Go To Assessment Comp\r\n Page\r\n";
+            button4.UseVisualStyleBackColor = true;
             // 
             // ASSESSMENTS
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(930, 711);
+            Controls.Add(button4);
+            Controls.Add(dataGridView1);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -102,6 +147,7 @@
             Controls.Add(textBox1);
             Name = "ASSESSMENTS";
             Text = "ASSESSMENTS";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,5 +159,9 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
+        private Button button2;
+        private Button button3;
+        private DataGridView dataGridView1;
+        private Button button4;
     }
 }
