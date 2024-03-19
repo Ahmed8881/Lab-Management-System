@@ -42,7 +42,7 @@ namespace sample.Forms
             string Email = emails.Text;
             string Phone = Contactno.Text;
             bool active = StatusCheckBox.Checked;
-            bool success = StudentDL.AddStudent(Reg, First, Last, Email, Phone, active);
+            bool success = StudentDL.AddStudent(First, Last, Phone, Email, Reg, active);
             if (success)
             {
                 MessageBox.Show("Student Added Successfully");
@@ -70,7 +70,7 @@ namespace sample.Forms
             bool active = StatusCheckBox.Checked;
 
             // Call the UpdateStudent method from your data layer
-            bool success = StudentDL.UpdateStudent(reg, first, last, email, phone, active);
+            bool success = StudentDL.UpdateStudent(first, last, phone, email, reg, active);
 
             // Check if the update was successful
             if (success)
