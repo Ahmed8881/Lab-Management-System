@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelMenu = new Panel();
+            A = new Button();
             button6 = new Button();
             Attendence = new Button();
             Result = new Button();
@@ -44,7 +45,6 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
-            A = new Button();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
@@ -68,6 +68,25 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 668);
             panelMenu.TabIndex = 0;
+            // 
+            // A
+            // 
+            A.Dock = DockStyle.Top;
+            A.FlatAppearance.BorderSize = 0;
+            A.FlatStyle = FlatStyle.Flat;
+            A.ForeColor = Color.Gainsboro;
+            A.Image = (Image)resources.GetObject("A.Image");
+            A.ImageAlign = ContentAlignment.MiddleLeft;
+            A.Location = new Point(0, 400);
+            A.Name = "A";
+            A.Padding = new Padding(12, 0, 0, 0);
+            A.Size = new Size(220, 64);
+            A.TabIndex = 8;
+            A.Text = "ASSESSMENT";
+            A.TextAlign = ContentAlignment.MiddleLeft;
+            A.TextImageRelation = TextImageRelation.ImageBeforeText;
+            A.UseVisualStyleBackColor = true;
+            A.Click += A_Click;
             // 
             // button6
             // 
@@ -93,7 +112,7 @@
             Attendence.FlatAppearance.BorderSize = 0;
             Attendence.FlatStyle = FlatStyle.Flat;
             Attendence.ForeColor = Color.Gainsboro;
-            Attendence.Image = Properties.Resources.sss;
+            Attendence.Image = (Image)resources.GetObject("Attendence.Image");
             Attendence.ImageAlign = ContentAlignment.MiddleLeft;
             Attendence.Location = new Point(0, 336);
             Attendence.Name = "Attendence";
@@ -141,7 +160,6 @@
             Assessment.TextAlign = ContentAlignment.MiddleLeft;
             Assessment.TextImageRelation = TextImageRelation.ImageBeforeText;
             Assessment.UseVisualStyleBackColor = true;
-           
             // 
             // Rubric
             // 
@@ -187,7 +205,7 @@
             Student.FlatAppearance.BorderSize = 0;
             Student.FlatStyle = FlatStyle.Flat;
             Student.ForeColor = Color.Gainsboro;
-            Student.Image = Properties.Resources.sss;
+            Student.Image = (Image)resources.GetObject("Student.Image");
             Student.ImageAlign = ContentAlignment.MiddleLeft;
             Student.Location = new Point(0, 80);
             Student.Name = "Student";
@@ -273,25 +291,6 @@
             label2.Size = new Size(327, 44);
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
-            // 
-            // A
-            // 
-            A.Dock = DockStyle.Top;
-            A.FlatAppearance.BorderSize = 0;
-            A.FlatStyle = FlatStyle.Flat;
-            A.ForeColor = Color.Gainsboro;
-            A.Image = (Image)resources.GetObject("A.Image");
-            A.ImageAlign = ContentAlignment.MiddleLeft;
-            A.Location = new Point(0, 400);
-            A.Name = "A";
-            A.Padding = new Padding(12, 0, 0, 0);
-            A.Size = new Size(220, 64);
-            A.TabIndex = 8;
-            A.Text = "ASSESSMENT";
-            A.TextAlign = ContentAlignment.MiddleLeft;
-            A.TextImageRelation = TextImageRelation.ImageBeforeText;
-            A.UseVisualStyleBackColor = true;
-            A.Click += A_Click;
             // 
             // Form1
             // 
