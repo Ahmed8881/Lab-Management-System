@@ -242,7 +242,6 @@
             Controls.Add(ADDBUTTON);
             Controls.Add(UPDATEST);
             Controls.Add(DELETEST);
-            Name = "FormStudents";
             Text = "Students";
             Load += FormStudents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
