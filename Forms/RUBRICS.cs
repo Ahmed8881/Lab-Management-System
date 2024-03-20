@@ -21,5 +21,12 @@ namespace sample.Forms
         {
 
         }
+
+        private void RUBRIC_LEVEL_Click(object sender, EventArgs e)
+        {
+            Rubric_Level rubricLevel = new Rubric_Level();
+            rubricLevel.Show();
+
+        }
     }
 }
