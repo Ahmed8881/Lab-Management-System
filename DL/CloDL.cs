@@ -13,31 +13,33 @@ namespace MID.DL
         public static bool AddClo(string Name, DateTime DateCreated)
         {
             string query = "Insert into Clo(Name, DateCreated, DateUpdated) values(@Name, @DateCreated, @DateCreated)";
-            using SqlConnection con = DBConfig.GetConnection();
+            SqlConnection con = DBConfig.GetConnection();
             DBConfig.OpenConnection();
-            using var command = new SqlCommand(query, con);
+            var command = new SqlCommand(query, con);
             command.Parameters.AddWithValue("@Name", Name);
             command.Parameters.AddWithValue("@DateCreated", DateCreated);
+            bool result = command.ExecuteNonQuery() > 0;
             DBConfig.CloseConnection();
-            return command.ExecuteNonQuery() > 0;
+            return result;
         }
         public static bool DeleteClo(int Id)
         {
-            string query = "DELETE FROM Clo WHERE Id = '@Id'";
+            string query = "DELETE FROM Clo WHERE Id = @Id";
             query = query.Replace("@Id", Id.ToString());
             return DBConfig.ExecuteCommand(query);
         }
         public static bool UpdateClo(int Id, string Name, DateTime DateUpdated)
         {
-            string query = "UPDATE Clo SET Name = '@Name', DateUpdated = '@DateUpdated' WHERE Id = '@Id'";
-            using SqlConnection con = DBConfig.GetConnection();
+            string query = "UPDATE Clo SET Name =@Name, DateUpdated = @DateUpdated WHERE Id = @Id";
+            SqlConnection con = DBConfig.GetConnection();
             DBConfig.OpenConnection();
-            using var command = new SqlCommand(query, con);
+            var command = new SqlCommand(query, con);
             command.Parameters.AddWithValue("@Name", Name);
             command.Parameters.AddWithValue("@DateUpdated", DateUpdated);
             command.Parameters.AddWithValue("@Id", Id);
+            bool result = command.ExecuteNonQuery() > 0;
             DBConfig.CloseConnection();
-            return command.ExecuteNonQuery() > 0;
+            return result;
         }
     }
 }
