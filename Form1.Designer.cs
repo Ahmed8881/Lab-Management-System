@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelMenu = new Panel();
+            A = new Button();
             button6 = new Button();
             Attendence = new Button();
             Result = new Button();
@@ -44,7 +45,6 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
-            A = new Button();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
@@ -64,10 +64,30 @@
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
-            panelMenu.Margin = new Padding(2, 2, 2, 2);
+            panelMenu.Margin = new Padding(2);
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(196, 835);
             panelMenu.TabIndex = 0;
+            // 
+            // A
+            // 
+            A.Dock = DockStyle.Top;
+            A.FlatAppearance.BorderSize = 0;
+            A.FlatStyle = FlatStyle.Flat;
+            A.ForeColor = Color.Gainsboro;
+            A.Image = (Image)resources.GetObject("A.Image");
+            A.ImageAlign = ContentAlignment.MiddleLeft;
+            A.Location = new Point(0, 456);
+            A.Margin = new Padding(2);
+            A.Name = "A";
+            A.Padding = new Padding(10, 0, 0, 0);
+            A.Size = new Size(196, 87);
+            A.TabIndex = 9;
+            A.Text = "ASSESSMENT";
+            A.TextAlign = ContentAlignment.MiddleLeft;
+            A.TextImageRelation = TextImageRelation.ImageBeforeText;
+            A.UseVisualStyleBackColor = true;
+            A.Click += A_Click_1;
             // 
             // button6
             // 
@@ -78,7 +98,7 @@
             button6.Image = (Image)resources.GetObject("button6.Image");
             button6.ImageAlign = ContentAlignment.MiddleLeft;
             button6.Location = new Point(0, 456);
-            button6.Margin = new Padding(2, 2, 2, 2);
+            button6.Margin = new Padding(2);
             button6.Name = "button6";
             button6.Padding = new Padding(10, 0, 0, 0);
             button6.Size = new Size(196, 0);
@@ -97,7 +117,7 @@
             Attendence.Image = (Image)resources.GetObject("Attendence.Image");
             Attendence.ImageAlign = ContentAlignment.MiddleLeft;
             Attendence.Location = new Point(0, 391);
-            Attendence.Margin = new Padding(2, 2, 2, 2);
+            Attendence.Margin = new Padding(2);
             Attendence.Name = "Attendence";
             Attendence.Padding = new Padding(10, 0, 0, 0);
             Attendence.Size = new Size(196, 65);
@@ -117,7 +137,7 @@
             Result.Image = (Image)resources.GetObject("Result.Image");
             Result.ImageAlign = ContentAlignment.MiddleLeft;
             Result.Location = new Point(0, 316);
-            Result.Margin = new Padding(2, 2, 2, 2);
+            Result.Margin = new Padding(2);
             Result.Name = "Result";
             Result.Padding = new Padding(10, 0, 0, 0);
             Result.Size = new Size(196, 75);
@@ -137,7 +157,7 @@
             Rubric.Image = (Image)resources.GetObject("Rubric.Image");
             Rubric.ImageAlign = ContentAlignment.MiddleLeft;
             Rubric.Location = new Point(0, 232);
-            Rubric.Margin = new Padding(2, 2, 2, 2);
+            Rubric.Margin = new Padding(2);
             Rubric.Name = "Rubric";
             Rubric.Padding = new Padding(10, 0, 0, 0);
             Rubric.Size = new Size(196, 84);
@@ -157,7 +177,7 @@
             CLO.Image = (Image)resources.GetObject("CLO.Image");
             CLO.ImageAlign = ContentAlignment.MiddleLeft;
             CLO.Location = new Point(0, 162);
-            CLO.Margin = new Padding(2, 2, 2, 2);
+            CLO.Margin = new Padding(2);
             CLO.Name = "CLO";
             CLO.Padding = new Padding(10, 0, 0, 0);
             CLO.Size = new Size(196, 70);
@@ -177,7 +197,7 @@
             Student.Image = (Image)resources.GetObject("Student.Image");
             Student.ImageAlign = ContentAlignment.MiddleLeft;
             Student.Location = new Point(0, 64);
-            Student.Margin = new Padding(2, 2, 2, 2);
+            Student.Margin = new Padding(2);
             Student.Name = "Student";
             Student.Padding = new Padding(10, 0, 0, 0);
             Student.Size = new Size(196, 98);
@@ -193,7 +213,7 @@
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
-            panelLogo.Margin = new Padding(2, 2, 2, 2);
+            panelLogo.Margin = new Padding(2);
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(196, 64);
             panelLogo.TabIndex = 1;
@@ -204,9 +224,9 @@
             panelTitleBar.Controls.Add(lblTitle);
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(196, 0);
-            panelTitleBar.Margin = new Padding(2, 2, 2, 2);
+            panelTitleBar.Margin = new Padding(2);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(853, 64);
+            panelTitleBar.Size = new Size(853, 95);
             panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -215,7 +235,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Microsoft Sans Serif", 16F);
             lblTitle.ForeColor = SystemColors.ControlLightLight;
-            lblTitle.Location = new Point(367, 18);
+            lblTitle.Location = new Point(367, 33);
             lblTitle.Margin = new Padding(2, 0, 2, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(95, 31);
@@ -229,10 +249,10 @@
             panelDesktopPanel.Controls.Add(label3);
             panelDesktopPanel.Controls.Add(label2);
             panelDesktopPanel.Dock = DockStyle.Fill;
-            panelDesktopPanel.Location = new Point(196, 64);
-            panelDesktopPanel.Margin = new Padding(2, 2, 2, 2);
+            panelDesktopPanel.Location = new Point(196, 95);
+            panelDesktopPanel.Margin = new Padding(2);
             panelDesktopPanel.Name = "panelDesktopPanel";
-            panelDesktopPanel.Size = new Size(853, 771);
+            panelDesktopPanel.Size = new Size(853, 740);
             panelDesktopPanel.TabIndex = 2;
             panelDesktopPanel.Paint += panelDesktopPanel_Paint;
             // 
@@ -240,7 +260,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(187, 118);
+            label1.Location = new Point(187, 87);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(523, 50);
@@ -254,9 +274,9 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(853, 771);
+            pictureBox1.Size = new Size(853, 740);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -287,25 +307,6 @@
             label2.Text = "LAB MANAGMENT ";
             label2.Click += label2_Click;
             // 
-            // A
-            // 
-            A.Dock = DockStyle.Top;
-            A.FlatAppearance.BorderSize = 0;
-            A.FlatStyle = FlatStyle.Flat;
-            A.ForeColor = Color.Gainsboro;
-            A.Image = (Image)resources.GetObject("A.Image");
-            A.ImageAlign = ContentAlignment.MiddleLeft;
-            A.Location = new Point(0, 456);
-            A.Margin = new Padding(2);
-            A.Name = "A";
-            A.Padding = new Padding(10, 0, 0, 0);
-            A.Size = new Size(196, 87);
-            A.TabIndex = 9;
-            A.Text = "ASSESSMENT";
-            A.TextAlign = ContentAlignment.MiddleLeft;
-            A.TextImageRelation = TextImageRelation.ImageBeforeText;
-            A.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -314,7 +315,7 @@
             Controls.Add(panelDesktopPanel);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             panelMenu.ResumeLayout(false);

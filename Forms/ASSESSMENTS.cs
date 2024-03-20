@@ -70,12 +70,18 @@ namespace sample.Forms
             {
                 MessageBox.Show("Failed to Update Assessment");
             }
+            LoadData();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             TitleBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             MarksBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             WeightBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void ASSESSMENTS_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

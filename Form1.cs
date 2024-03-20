@@ -13,7 +13,7 @@ namespace sample
         {
             InitializeComponent();
             random = new Random();
-           
+
         }
         private void SetIdealFormSize()
         {
@@ -164,7 +164,7 @@ namespace sample
 
         private void A_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.ASSESSMENTS(), sender);
+            
         }
 
         private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
@@ -180,6 +180,11 @@ namespace sample
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void A_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.ASSESSMENTS(), sender);
         }
     }
 
