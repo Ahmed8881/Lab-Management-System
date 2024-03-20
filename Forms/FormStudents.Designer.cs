@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudents));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DELETEST = new Button();
             UPDATEST = new Button();
             ADDBUTTON = new Button();
@@ -54,11 +55,14 @@
             DELETEST.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DELETEST.BackColor = SystemColors.MenuHighlight;
             DELETEST.FlatStyle = FlatStyle.Flat;
+            DELETEST.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             DELETEST.ForeColor = SystemColors.ControlLightLight;
-            DELETEST.Location = new Point(672, 283);
-            DELETEST.Margin = new Padding(2, 2, 2, 2);
+            DELETEST.Image = (Image)resources.GetObject("DELETEST.Image");
+            DELETEST.ImageAlign = ContentAlignment.MiddleLeft;
+            DELETEST.Location = new Point(803, 377);
+            DELETEST.Margin = new Padding(2, 3, 2, 3);
             DELETEST.Name = "DELETEST";
-            DELETEST.Size = new Size(68, 35);
+            DELETEST.Size = new Size(169, 62);
             DELETEST.TabIndex = 0;
             DELETEST.Text = "DELETE";
             DELETEST.UseVisualStyleBackColor = false;
@@ -69,11 +73,14 @@
             UPDATEST.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             UPDATEST.BackColor = SystemColors.MenuHighlight;
             UPDATEST.FlatStyle = FlatStyle.Flat;
+            UPDATEST.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             UPDATEST.ForeColor = SystemColors.ControlLightLight;
-            UPDATEST.Location = new Point(536, 283);
-            UPDATEST.Margin = new Padding(2, 2, 2, 2);
+            UPDATEST.Image = Properties.Resources.icons8_update_done_24;
+            UPDATEST.ImageAlign = ContentAlignment.MiddleLeft;
+            UPDATEST.Location = new Point(613, 377);
+            UPDATEST.Margin = new Padding(2, 3, 2, 3);
             UPDATEST.Name = "UPDATEST";
-            UPDATEST.Size = new Size(68, 35);
+            UPDATEST.Size = new Size(149, 62);
             UPDATEST.TabIndex = 1;
             UPDATEST.Text = "UPDATE";
             UPDATEST.UseVisualStyleBackColor = false;
@@ -84,11 +91,14 @@
             ADDBUTTON.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ADDBUTTON.BackColor = SystemColors.MenuHighlight;
             ADDBUTTON.FlatStyle = FlatStyle.Flat;
+            ADDBUTTON.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             ADDBUTTON.ForeColor = SystemColors.ControlLightLight;
-            ADDBUTTON.Location = new Point(395, 283);
-            ADDBUTTON.Margin = new Padding(2, 2, 2, 2);
+            ADDBUTTON.Image = (Image)resources.GetObject("ADDBUTTON.Image");
+            ADDBUTTON.ImageAlign = ContentAlignment.MiddleLeft;
+            ADDBUTTON.Location = new Point(451, 377);
+            ADDBUTTON.Margin = new Padding(2, 3, 2, 3);
             ADDBUTTON.Name = "ADDBUTTON";
-            ADDBUTTON.Size = new Size(69, 35);
+            ADDBUTTON.Size = new Size(132, 62);
             ADDBUTTON.TabIndex = 2;
             ADDBUTTON.Text = "ADD";
             ADDBUTTON.UseVisualStyleBackColor = false;
@@ -99,10 +109,10 @@
             RegNumber.AutoSize = true;
             RegNumber.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
             RegNumber.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            RegNumber.Location = new Point(36, 54);
+            RegNumber.Location = new Point(41, 72);
             RegNumber.Margin = new Padding(2, 0, 2, 0);
             RegNumber.Name = "RegNumber";
-            RegNumber.Size = new Size(68, 19);
+            RegNumber.Size = new Size(83, 23);
             RegNumber.TabIndex = 3;
             RegNumber.Text = "Reg Num";
             // 
@@ -110,10 +120,10 @@
             // 
             Name.AutoSize = true;
             Name.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            Name.Location = new Point(29, 94);
+            Name.Location = new Point(33, 125);
             Name.Margin = new Padding(2, 0, 2, 0);
             Name.Name = "Name";
-            Name.Size = new Size(77, 19);
+            Name.Size = new Size(93, 23);
             Name.TabIndex = 4;
             Name.Text = "First Name";
             // 
@@ -121,59 +131,59 @@
             // 
             LastName.AutoSize = true;
             LastName.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            LastName.Location = new Point(30, 135);
+            LastName.Location = new Point(34, 180);
             LastName.Margin = new Padding(2, 0, 2, 0);
             LastName.Name = "LastName";
-            LastName.Size = new Size(75, 19);
+            LastName.Size = new Size(91, 23);
             LastName.TabIndex = 5;
             LastName.Text = "Last Name";
             // 
             // RegNum
             // 
-            RegNum.Location = new Point(108, 52);
-            RegNum.Margin = new Padding(2, 2, 2, 2);
+            RegNum.Location = new Point(128, 71);
+            RegNum.Margin = new Padding(2, 3, 2, 3);
             RegNum.Name = "RegNum";
-            RegNum.Size = new Size(103, 23);
+            RegNum.Size = new Size(117, 27);
             RegNum.TabIndex = 6;
             // 
             // FirstName
             // 
-            FirstName.Location = new Point(108, 92);
-            FirstName.Margin = new Padding(2, 2, 2, 2);
+            FirstName.Location = new Point(123, 123);
+            FirstName.Margin = new Padding(2, 3, 2, 3);
             FirstName.Name = "FirstName";
-            FirstName.Size = new Size(103, 23);
+            FirstName.Size = new Size(117, 27);
             FirstName.TabIndex = 7;
             // 
             // LastNames
             // 
-            LastNames.Location = new Point(108, 135);
-            LastNames.Margin = new Padding(2, 2, 2, 2);
+            LastNames.Location = new Point(123, 180);
+            LastNames.Margin = new Padding(2, 3, 2, 3);
             LastNames.Name = "LastNames";
-            LastNames.Size = new Size(103, 23);
+            LastNames.Size = new Size(117, 27);
             LastNames.TabIndex = 8;
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(229, 226, 224);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(229, 226, 224);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(109, 122, 224);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(109, 122, 224);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeight = 40;
-            dataGridView1.Location = new Point(273, 46);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(312, 61);
+            dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(673, 218);
+            dataGridView1.Size = new Size(769, 291);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -182,10 +192,10 @@
             // 
             Email.AutoSize = true;
             Email.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            Email.Location = new Point(48, 171);
+            Email.Location = new Point(55, 228);
             Email.Margin = new Padding(2, 0, 2, 0);
             Email.Name = "Email";
-            Email.Size = new Size(43, 19);
+            Email.Size = new Size(51, 23);
             Email.TabIndex = 11;
             Email.Text = "Email";
             // 
@@ -193,37 +203,37 @@
             // 
             PhoneNo.AutoSize = true;
             PhoneNo.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            PhoneNo.Location = new Point(21, 204);
+            PhoneNo.Location = new Point(24, 272);
             PhoneNo.Margin = new Padding(2, 0, 2, 0);
             PhoneNo.Name = "PhoneNo";
-            PhoneNo.Size = new Size(80, 19);
+            PhoneNo.Size = new Size(99, 23);
             PhoneNo.TabIndex = 12;
             PhoneNo.Text = "Phone num";
             // 
             // emails
             // 
-            emails.Location = new Point(108, 171);
-            emails.Margin = new Padding(2, 2, 2, 2);
+            emails.Location = new Point(123, 228);
+            emails.Margin = new Padding(2, 3, 2, 3);
             emails.Name = "emails";
-            emails.Size = new Size(103, 23);
+            emails.Size = new Size(117, 27);
             emails.TabIndex = 13;
             // 
             // Contactno
             // 
-            Contactno.Location = new Point(108, 204);
-            Contactno.Margin = new Padding(2, 2, 2, 2);
+            Contactno.Location = new Point(123, 272);
+            Contactno.Margin = new Padding(2, 3, 2, 3);
             Contactno.Name = "Contactno";
-            Contactno.Size = new Size(103, 23);
+            Contactno.Size = new Size(117, 27);
             Contactno.TabIndex = 14;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            label7.Location = new Point(48, 247);
+            label7.Location = new Point(55, 329);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(55, 19);
+            label7.Size = new Size(66, 23);
             label7.TabIndex = 15;
             label7.Text = "ACTIVE";
             label7.Click += label7_Click;
@@ -231,18 +241,18 @@
             // StatusCheckBox
             // 
             StatusCheckBox.AutoSize = true;
-            StatusCheckBox.Location = new Point(108, 247);
-            StatusCheckBox.Margin = new Padding(2, 2, 2, 2);
+            StatusCheckBox.Location = new Point(123, 329);
+            StatusCheckBox.Margin = new Padding(2, 3, 2, 3);
             StatusCheckBox.Name = "StatusCheckBox";
-            StatusCheckBox.Size = new Size(15, 14);
+            StatusCheckBox.Size = new Size(18, 17);
             StatusCheckBox.TabIndex = 16;
             StatusCheckBox.UseVisualStyleBackColor = true;
             // 
             // FormStudents
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(962, 398);
+            ClientSize = new Size(1099, 531);
             Controls.Add(StatusCheckBox);
             Controls.Add(label7);
             Controls.Add(Contactno);
@@ -259,7 +269,8 @@
             Controls.Add(ADDBUTTON);
             Controls.Add(UPDATEST);
             Controls.Add(DELETEST);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2, 3, 2, 3);
+            Name = "FormStudents";
             Text = "Students";
             Load += FormStudents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
