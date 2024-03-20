@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            button1 = new Button();
+            TitleBox = new TextBox();
+            AddButton = new Button();
             label2 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
+            WeightBox = new TextBox();
+            MarksBox = new TextBox();
+            DeleteButton = new Button();
+            UpdateButton = new Button();
             dataGridView1 = new DataGridView();
             button4 = new Button();
             label1 = new Label();
@@ -42,94 +42,94 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // TitleBox
             // 
-            textBox1.Location = new Point(158, 59);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(263, 27);
-            textBox1.TabIndex = 1;
+            TitleBox.Location = new Point(138, 44);
+            TitleBox.Margin = new Padding(2);
+            TitleBox.Name = "TitleBox";
+            TitleBox.Size = new Size(231, 23);
+            TitleBox.TabIndex = 1;
             // 
-            // button1
+            // AddButton
             // 
-            button1.BackColor = SystemColors.Highlight;
-            button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(538, 459);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(116, 48);
-            button1.TabIndex = 2;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = false;
+            AddButton.BackColor = SystemColors.Highlight;
+            AddButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            AddButton.ForeColor = SystemColors.ButtonHighlight;
+            AddButton.Location = new Point(471, 344);
+            AddButton.Margin = new Padding(2);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(102, 36);
+            AddButton.TabIndex = 2;
+            AddButton.Text = "ADD";
+            AddButton.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(44, 55);
+            label2.Location = new Point(38, 41);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(51, 28);
+            label2.Size = new Size(42, 21);
             label2.TabIndex = 3;
             label2.Text = "Title";
             // 
-            // textBox2
+            // WeightBox
             // 
-            textBox2.ForeColor = Color.DarkGray;
-            textBox2.Location = new Point(158, 183);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(263, 27);
-            textBox2.TabIndex = 4;
-            textBox2.Text = "Weight";
-            textBox2.TextChanged += textBox2_TextChanged;
+            WeightBox.ForeColor = Color.DarkGray;
+            WeightBox.Location = new Point(138, 137);
+            WeightBox.Margin = new Padding(2);
+            WeightBox.Name = "WeightBox";
+            WeightBox.Size = new Size(231, 23);
+            WeightBox.TabIndex = 4;
+            WeightBox.Text = "Weight";
+            WeightBox.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // MarksBox
             // 
-            textBox3.ForeColor = Color.DarkGray;
-            textBox3.Location = new Point(158, 119);
-            textBox3.Margin = new Padding(2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(263, 27);
-            textBox3.TabIndex = 5;
-            textBox3.Text = "Marks";
+            MarksBox.ForeColor = Color.DarkGray;
+            MarksBox.Location = new Point(138, 89);
+            MarksBox.Margin = new Padding(2);
+            MarksBox.Name = "MarksBox";
+            MarksBox.Size = new Size(231, 23);
+            MarksBox.TabIndex = 5;
+            MarksBox.Text = "Marks";
             // 
-            // button2
+            // DeleteButton
             // 
-            button2.BackColor = SystemColors.Highlight;
-            button2.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(911, 459);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 48);
-            button2.TabIndex = 7;
-            button2.Text = "DELETE\r\n";
-            button2.UseVisualStyleBackColor = false;
+            DeleteButton.BackColor = SystemColors.Highlight;
+            DeleteButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            DeleteButton.ForeColor = SystemColors.ButtonHighlight;
+            DeleteButton.Location = new Point(797, 344);
+            DeleteButton.Margin = new Padding(2);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(94, 36);
+            DeleteButton.TabIndex = 7;
+            DeleteButton.Text = "DELETE\r\n";
+            DeleteButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // UpdateButton
             // 
-            button3.BackColor = SystemColors.Highlight;
-            button3.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(705, 459);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(121, 48);
-            button3.TabIndex = 8;
-            button3.Text = "UPDATE\r\n";
-            button3.UseVisualStyleBackColor = false;
+            UpdateButton.BackColor = SystemColors.Highlight;
+            UpdateButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            UpdateButton.ForeColor = SystemColors.ButtonHighlight;
+            UpdateButton.Location = new Point(617, 344);
+            UpdateButton.Margin = new Padding(2);
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Size = new Size(106, 36);
+            UpdateButton.TabIndex = 8;
+            UpdateButton.Text = "UPDATE\r\n";
+            UpdateButton.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(519, 23);
+            dataGridView1.Location = new Point(454, 17);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(539, 406);
+            dataGridView1.Size = new Size(472, 304);
             dataGridView1.TabIndex = 9;
             // 
             // button4
@@ -137,10 +137,10 @@
             button4.BackColor = SystemColors.Highlight;
             button4.Font = new Font("Yu Gothic UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(44, 345);
+            button4.Location = new Point(38, 259);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
-            button4.Size = new Size(362, 50);
+            button4.Size = new Size(317, 38);
             button4.TabIndex = 10;
             button4.Text = "Go To Assessment Comp\r\n Page\r\n";
             button4.UseVisualStyleBackColor = false;
@@ -150,10 +150,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(44, 115);
+            label1.Location = new Point(38, 86);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(67, 28);
+            label1.Size = new Size(54, 21);
             label1.TabIndex = 11;
             label1.Text = "Marks";
             // 
@@ -161,29 +161,29 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(44, 179);
+            label3.Location = new Point(38, 134);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(110, 28);
+            label3.Size = new Size(90, 21);
             label3.TabIndex = 12;
             label3.Text = "Weightage";
             // 
             // ASSESSMENTS
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1112, 714);
+            ClientSize = new Size(973, 536);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(button4);
             Controls.Add(dataGridView1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(UpdateButton);
+            Controls.Add(DeleteButton);
+            Controls.Add(MarksBox);
+            Controls.Add(WeightBox);
             Controls.Add(label2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(AddButton);
+            Controls.Add(TitleBox);
             Margin = new Padding(2);
             Name = "ASSESSMENTS";
             Text = "ASSESSMENTS";
@@ -193,13 +193,13 @@
         }
 
         #endregion
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox TitleBox;
+        private Button AddButton;
         private Label label2;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button2;
-        private Button button3;
+        private TextBox WeightBox;
+        private TextBox MarksBox;
+        private Button DeleteButton;
+        private Button UpdateButton;
         private DataGridView dataGridView1;
         private Button button4;
         private Label label1;
