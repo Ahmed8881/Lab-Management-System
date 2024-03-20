@@ -71,6 +71,11 @@ namespace sample.Forms
         {
 
         }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+            textBox1.Text = row.Cells["Name"].Value.ToString();
+        }
 
     }
 }
