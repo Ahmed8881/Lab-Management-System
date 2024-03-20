@@ -28,7 +28,7 @@ namespace sample
         private int CalculateIdealWidth()
         {
             // Calculate the ideal width based on the controls within the form
-            
+
             int totalWidth = 0;
 
             //  Calculate total width by summing up the widths of controls
@@ -173,6 +173,11 @@ namespace sample
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
