@@ -27,7 +27,7 @@ class RubricDL
     }
     public static bool AddRubric(string Details, int CloId)
     {
-        string query = "Insert into Rubric(Details, CloId) values(@Details, @CloId)";
+        string query = "Insert into Rubric(Details, CloId) values('@Details', @CloId)";
         query = query.Replace("@Details", Details);
         query = query.Replace("@CloId", CloId.ToString());
         return DBConfig.ExecuteCommand(query);
