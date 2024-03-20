@@ -55,7 +55,7 @@
             DELETEST.BackColor = SystemColors.MenuHighlight;
             DELETEST.FlatStyle = FlatStyle.Flat;
             DELETEST.ForeColor = SystemColors.ControlLightLight;
-            DELETEST.Location = new Point(1223, 537);
+            DELETEST.Location = new Point(960, 471);
             DELETEST.Name = "DELETEST";
             DELETEST.Size = new Size(97, 58);
             DELETEST.TabIndex = 0;
@@ -69,7 +69,7 @@
             UPDATEST.BackColor = SystemColors.MenuHighlight;
             UPDATEST.FlatStyle = FlatStyle.Flat;
             UPDATEST.ForeColor = SystemColors.ControlLightLight;
-            UPDATEST.Location = new Point(1086, 537);
+            UPDATEST.Location = new Point(766, 471);
             UPDATEST.Name = "UPDATEST";
             UPDATEST.Size = new Size(97, 58);
             UPDATEST.TabIndex = 1;
@@ -83,7 +83,7 @@
             ADDBUTTON.BackColor = SystemColors.MenuHighlight;
             ADDBUTTON.FlatStyle = FlatStyle.Flat;
             ADDBUTTON.ForeColor = SystemColors.ControlLightLight;
-            ADDBUTTON.Location = new Point(933, 537);
+            ADDBUTTON.Location = new Point(564, 471);
             ADDBUTTON.Name = "ADDBUTTON";
             ADDBUTTON.Size = new Size(99, 58);
             ADDBUTTON.TabIndex = 2;
@@ -160,10 +160,10 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 40;
-            dataGridView1.Location = new Point(390, 87);
+            dataGridView1.Location = new Point(390, 76);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(961, 433);
+            dataGridView1.Size = new Size(961, 364);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 

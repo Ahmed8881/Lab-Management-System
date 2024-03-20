@@ -13,6 +13,48 @@ namespace sample
         {
             InitializeComponent();
             random = new Random();
+            SetIdealFormSize();
+        }
+        private void SetIdealFormSize()
+        {
+            // Calculate the required width and height based on the controls within the form
+            int requiredWidth = CalculateIdealWidth();
+            int requiredHeight = CalculateIdealHeight();
+
+            // Set the new size of the form
+            this.Size = new Size(requiredWidth, requiredHeight);
+        }
+
+        private int CalculateIdealWidth()
+        {
+            // Calculate the ideal width based on the controls within the form
+            
+            int totalWidth = 0;
+
+            //  Calculate total width by summing up the widths of controls
+            foreach (Control control in this.Controls)
+            {
+                totalWidth += control.Width + control.Margin.Left + control.Margin.Right;
+            }
+
+            // Optionally add extra width for form border and padding
+            return totalWidth + SystemInformation.VerticalScrollBarWidth + SystemInformation.Border3DSize.Width * 2;
+        }
+
+        private int CalculateIdealHeight()
+        {
+            // Calculate the ideal height based on the controls within the form
+            //  sum up the heights of all controls or determine the maximum height required
+            int totalHeight = 0;
+
+            // Example: Calculate total height by summing up the heights of controls
+            foreach (Control control in this.Controls)
+            {
+                totalHeight += control.Height + control.Margin.Top + control.Margin.Bottom;
+            }
+
+            // Optionally add extra height for form border and title bar
+            return totalHeight + SystemInformation.CaptionHeight + SystemInformation.Border3DSize.Height * 2;
         }
         //Methods
         private Color SelectThemeColor()
@@ -103,7 +145,7 @@ namespace sample
 
 
 
-       
+
 
         private void Result_Click(object sender, EventArgs e)
         {
@@ -123,6 +165,16 @@ namespace sample
         private void A_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.ASSESSMENTS(), sender);
+        }
+
+        private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

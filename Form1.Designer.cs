@@ -42,6 +42,10 @@
             panelTitleBar = new Panel();
             lblTitle = new Label();
             panelDesktopPanel = new Panel();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
@@ -66,7 +70,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(220, 668);
+            panelMenu.Size = new Size(220, 1044);
             panelMenu.TabIndex = 0;
             // 
             // A
@@ -234,7 +238,7 @@
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(220, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(632, 80);
+            panelTitleBar.Size = new Size(1091, 80);
             panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -243,7 +247,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Microsoft Sans Serif", 16F);
             lblTitle.ForeColor = SystemColors.ControlLightLight;
-            lblTitle.Location = new Point(242, 23);
+            lblTitle.Location = new Point(471, 23);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(112, 37);
             lblTitle.TabIndex = 0;
@@ -251,19 +255,68 @@
             // 
             // panelDesktopPanel
             // 
+            panelDesktopPanel.Controls.Add(label6);
+            panelDesktopPanel.Controls.Add(label5);
+            panelDesktopPanel.Controls.Add(label4);
+            panelDesktopPanel.Controls.Add(label1);
             panelDesktopPanel.Controls.Add(pictureBox1);
             panelDesktopPanel.Controls.Add(label3);
             panelDesktopPanel.Controls.Add(label2);
             panelDesktopPanel.Dock = DockStyle.Fill;
             panelDesktopPanel.Location = new Point(220, 80);
             panelDesktopPanel.Name = "panelDesktopPanel";
-            panelDesktopPanel.Size = new Size(632, 588);
+            panelDesktopPanel.Size = new Size(1091, 964);
             panelDesktopPanel.TabIndex = 2;
+            panelDesktopPanel.Paint += panelDesktopPanel_Paint;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.Control;
+            label6.Font = new Font("Yu Gothic UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
+            label6.Location = new Point(674, 556);
+            label6.Name = "label6";
+            label6.Size = new Size(191, 48);
+            label6.TabIndex = 6;
+            label6.Text = "SIR FARAZ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.Control;
+            label5.Font = new Font("Yu Gothic UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
+            label5.Location = new Point(390, 556);
+            label5.Name = "label5";
+            label5.Size = new Size(245, 48);
+            label5.TabIndex = 5;
+            label5.Text = "ASSIGNED BY";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.Control;
+            label4.Font = new Font("Yu Gothic UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
+            label4.Location = new Point(380, 406);
+            label4.Name = "label4";
+            label4.Size = new Size(245, 48);
+            label4.TabIndex = 4;
+            label4.Text = "MID PROJECT";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Control;
+            label1.Font = new Font("Yu Gothic UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
+            label1.Location = new Point(152, 406);
+            label1.Name = "label1";
+            label1.Size = new Size(206, 48);
+            label1.TabIndex = 3;
+            label1.Text = "DATABASE ";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.st;
-            pictureBox1.Location = new Point(195, 64);
+            pictureBox1.Location = new Point(283, 64);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(225, 225);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -275,7 +328,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold | FontStyle.Italic);
             label3.ForeColor = SystemColors.InactiveCaptionText;
-            label3.Location = new Point(213, 384);
+            label3.Location = new Point(687, 175);
             label3.Name = "label3";
             label3.Size = new Size(160, 44);
             label3.TabIndex = 1;
@@ -286,17 +339,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold | FontStyle.Italic);
             label2.ForeColor = SystemColors.InactiveCaptionText;
-            label2.Location = new Point(147, 320);
+            label2.Location = new Point(619, 84);
             label2.Name = "label2";
             label2.Size = new Size(327, 44);
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
+            label2.Click += label2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(852, 668);
+            ClientSize = new Size(1311, 1044);
             Controls.Add(panelDesktopPanel);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
@@ -329,5 +383,9 @@
         private Label label3;
         private PictureBox pictureBox1;
         private Button A;
+        private Label label1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
     }
 }
