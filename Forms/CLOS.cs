@@ -30,6 +30,7 @@ namespace sample.Forms
             if (CloDL.AddClo(Name, DateCreated))
             {
                 MessageBox.Show("CLO Added Successfully");
+                textBox1.Text = "";
                 LoadData();
             }
             else
@@ -45,6 +46,7 @@ namespace sample.Forms
             if (CloDL.UpdateClo(Id, Name, DateUpdated))
             {
                 MessageBox.Show("CLO Updated Successfully");
+                textBox1.Text = "";
                 LoadData();
             }
             else
