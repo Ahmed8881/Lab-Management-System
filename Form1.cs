@@ -13,7 +13,7 @@ namespace sample
         {
             InitializeComponent();
             random = new Random();
-            SetIdealFormSize();
+           
         }
         private void SetIdealFormSize()
         {
