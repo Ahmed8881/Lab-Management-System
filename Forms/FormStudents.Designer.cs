@@ -270,7 +270,6 @@
             Controls.Add(UPDATEST);
             Controls.Add(DELETEST);
             Margin = new Padding(2, 3, 2, 3);
-            Name = "FormStudents";
             Text = "Students";
             Load += FormStudents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
