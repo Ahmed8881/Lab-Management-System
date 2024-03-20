@@ -83,7 +83,6 @@
             WeightBox.Size = new Size(231, 23);
             WeightBox.TabIndex = 4;
             WeightBox.Text = "Weight";
-            WeightBox.TextChanged += textBox2_TextChanged;
             // 
             // MarksBox
             // 
@@ -131,6 +130,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(472, 304);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // button4
             // 
@@ -144,7 +144,6 @@
             button4.TabIndex = 10;
             button4.Text = "Go To Assessment Comp\r\n Page\r\n";
             button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // label1
             // 
