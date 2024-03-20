@@ -33,141 +33,136 @@
             ADD = new Button();
             CLONAME = new Label();
             textBox2 = new TextBox();
-            CLODETAILS = new Label();
             UPDATECLO = new Button();
             DELETECLO = new Button();
             RUBRIC_LEVEL = new Button();
-            textBox3 = new TextBox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            RUBRICSGRID = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)RUBRICSGRID).BeginInit();
             SuspendLayout();
             // 
             // CLOID
             // 
             CLOID.AutoSize = true;
-            CLOID.Location = new Point(143, 114);
+            CLOID.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            CLOID.ForeColor = SystemColors.ActiveCaptionText;
+            CLOID.Location = new Point(60, 114);
             CLOID.Margin = new Padding(2, 0, 2, 0);
             CLOID.Name = "CLOID";
-            CLOID.Size = new Size(54, 20);
+            CLOID.Size = new Size(145, 28);
             CLOID.TabIndex = 0;
-            CLOID.Text = "CLO ID";
+            CLOID.Text = "Rubrics Details";
             CLOID.Click += label1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(245, 114);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Location = new Point(228, 118);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(104, 27);
+            textBox1.Size = new Size(162, 27);
             textBox1.TabIndex = 1;
             // 
             // ADD
             // 
-            ADD.Location = new Point(424, 394);
-            ADD.Margin = new Padding(2, 2, 2, 2);
+            ADD.BackColor = SystemColors.Highlight;
+            ADD.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            ADD.ForeColor = SystemColors.ControlLightLight;
+            ADD.Location = new Point(442, 524);
+            ADD.Margin = new Padding(2);
             ADD.Name = "ADD";
-            ADD.Size = new Size(81, 46);
+            ADD.Size = new Size(116, 46);
             ADD.TabIndex = 2;
             ADD.Text = "ADD";
-            ADD.UseVisualStyleBackColor = true;
+            ADD.UseVisualStyleBackColor = false;
             // 
             // CLONAME
             // 
             CLONAME.AutoSize = true;
-            CLONAME.Location = new Point(132, 159);
+            CLONAME.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            CLONAME.ForeColor = SystemColors.ActiveCaptionText;
+            CLONAME.Location = new Point(89, 185);
             CLONAME.Margin = new Padding(2, 0, 2, 0);
             CLONAME.Name = "CLONAME";
-            CLONAME.Size = new Size(81, 20);
+            CLONAME.Size = new Size(81, 28);
             CLONAME.TabIndex = 3;
-            CLONAME.Text = "CLO NAME";
+            CLONAME.Text = "CLO  ID";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(245, 159);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
+            textBox2.Location = new Point(228, 186);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(104, 27);
+            textBox2.Size = new Size(162, 27);
             textBox2.TabIndex = 4;
-            // 
-            // CLODETAILS
-            // 
-            CLODETAILS.AutoSize = true;
-            CLODETAILS.Location = new Point(130, 216);
-            CLODETAILS.Margin = new Padding(2, 0, 2, 0);
-            CLODETAILS.Name = "CLODETAILS";
-            CLODETAILS.Size = new Size(85, 20);
-            CLODETAILS.TabIndex = 5;
-            CLODETAILS.Text = "CLO Details";
             // 
             // UPDATECLO
             // 
-            UPDATECLO.Location = new Point(525, 394);
-            UPDATECLO.Margin = new Padding(2, 2, 2, 2);
+            UPDATECLO.BackColor = SystemColors.Highlight;
+            UPDATECLO.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            UPDATECLO.ForeColor = SystemColors.ControlLightLight;
+            UPDATECLO.Location = new Point(591, 524);
+            UPDATECLO.Margin = new Padding(2);
             UPDATECLO.Name = "UPDATECLO";
-            UPDATECLO.Size = new Size(81, 46);
+            UPDATECLO.Size = new Size(118, 46);
             UPDATECLO.TabIndex = 6;
             UPDATECLO.Text = "UPDATE";
-            UPDATECLO.UseVisualStyleBackColor = true;
+            UPDATECLO.UseVisualStyleBackColor = false;
             // 
             // DELETECLO
             // 
-            DELETECLO.Location = new Point(627, 394);
-            DELETECLO.Margin = new Padding(2, 2, 2, 2);
+            DELETECLO.BackColor = SystemColors.Highlight;
+            DELETECLO.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            DELETECLO.ForeColor = SystemColors.ControlLightLight;
+            DELETECLO.Location = new Point(741, 524);
+            DELETECLO.Margin = new Padding(2);
             DELETECLO.Name = "DELETECLO";
-            DELETECLO.Size = new Size(81, 46);
+            DELETECLO.Size = new Size(118, 46);
             DELETECLO.TabIndex = 7;
             DELETECLO.Text = "DELETE";
-            DELETECLO.UseVisualStyleBackColor = true;
+            DELETECLO.UseVisualStyleBackColor = false;
             // 
             // RUBRIC_LEVEL
             // 
-            RUBRIC_LEVEL.Location = new Point(116, 285);
-            RUBRIC_LEVEL.Margin = new Padding(2, 2, 2, 2);
+            RUBRIC_LEVEL.BackColor = SystemColors.Highlight;
+            RUBRIC_LEVEL.Font = new Font("Yu Gothic UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            RUBRIC_LEVEL.ForeColor = SystemColors.ButtonHighlight;
+            RUBRIC_LEVEL.Location = new Point(60, 274);
+            RUBRIC_LEVEL.Margin = new Padding(2);
             RUBRIC_LEVEL.Name = "RUBRIC_LEVEL";
-            RUBRIC_LEVEL.Size = new Size(257, 46);
+            RUBRIC_LEVEL.Size = new Size(340, 46);
             RUBRIC_LEVEL.TabIndex = 8;
             RUBRIC_LEVEL.Text = "Go  To Rubric Level Page";
-            RUBRIC_LEVEL.UseVisualStyleBackColor = true;
+            RUBRIC_LEVEL.UseVisualStyleBackColor = false;
             RUBRIC_LEVEL.Click += RUBRIC_LEVEL_Click;
             // 
-            // textBox3
+            // RUBRICSGRID
             // 
-            textBox3.Location = new Point(245, 214);
-            textBox3.Margin = new Padding(2, 2, 2, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(104, 27);
-            textBox3.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(442, 46);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(291, 321);
-            dataGridView1.TabIndex = 10;
+            RUBRICSGRID.BackgroundColor = SystemColors.ButtonHighlight;
+            RUBRICSGRID.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            RUBRICSGRID.Location = new Point(442, 46);
+            RUBRICSGRID.Margin = new Padding(2);
+            RUBRICSGRID.Name = "RUBRICSGRID";
+            RUBRICSGRID.RowHeadersWidth = 62;
+            RUBRICSGRID.Size = new Size(491, 451);
+            RUBRICSGRID.TabIndex = 10;
             // 
             // RUBRICS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(785, 550);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox3);
+            ClientSize = new Size(959, 753);
+            Controls.Add(RUBRICSGRID);
             Controls.Add(RUBRIC_LEVEL);
             Controls.Add(DELETECLO);
             Controls.Add(UPDATECLO);
-            Controls.Add(CLODETAILS);
             Controls.Add(textBox2);
             Controls.Add(CLONAME);
             Controls.Add(ADD);
             Controls.Add(textBox1);
             Controls.Add(CLOID);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "RUBRICS";
             Text = "RUBRICS";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RUBRICSGRID).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,11 +174,9 @@
         private Button ADD;
         private Label CLONAME;
         private TextBox textBox2;
-        private Label CLODETAILS;
         private Button UPDATECLO;
         private Button DELETECLO;
         private Button RUBRIC_LEVEL;
-        private TextBox textBox3;
-        private DataGridView dataGridView1;
+        private DataGridView RUBRICSGRID;
     }
 }
