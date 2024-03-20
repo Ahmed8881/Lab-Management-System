@@ -21,5 +21,11 @@ namespace sample.Forms
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Assessment_Component assessmentComponent = new Assessment_Component();
+            assessmentComponent.Show();
+        }
     }
 }
