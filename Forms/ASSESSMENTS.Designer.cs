@@ -77,23 +77,21 @@
             // 
             // WeightBox
             // 
-            WeightBox.ForeColor = Color.DarkGray;
+            WeightBox.ForeColor = Color.Black;
             WeightBox.Location = new Point(158, 183);
             WeightBox.Margin = new Padding(2, 3, 2, 3);
             WeightBox.Name = "WeightBox";
             WeightBox.Size = new Size(263, 27);
             WeightBox.TabIndex = 4;
-            WeightBox.Text = "Weight";
             // 
             // MarksBox
             // 
-            MarksBox.ForeColor = Color.DarkGray;
+            MarksBox.ForeColor = Color.Black;
             MarksBox.Location = new Point(158, 119);
             MarksBox.Margin = new Padding(2, 3, 2, 3);
             MarksBox.Name = "MarksBox";
             MarksBox.Size = new Size(263, 27);
             MarksBox.TabIndex = 5;
-            MarksBox.Text = "Marks";
             // 
             // DeleteButton
             // 
@@ -174,6 +172,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1112, 715);
             Controls.Add(label3);
             Controls.Add(label1);
