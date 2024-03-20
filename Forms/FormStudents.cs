@@ -99,6 +99,11 @@ namespace sample.Forms
 
                 // Optionally clear the textboxes after successful deletion
                 RegNum.Text = "";
+                FirstName.Text = "";
+                LastNames.Text = "";
+                emails.Text = "";
+                Contactno.Text = "";
+                StatusCheckBox.Checked = false;
             }
             else
             {
@@ -110,6 +115,34 @@ namespace sample.Forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Retrieve the registration number of the student from the selected row
+            string regNo = dataGridView1.CurrentRow.Cells["RegistrationNumber"].Value.ToString();
+
+            // Retrieve the first name of the student from the selected row
+            string firstName = dataGridView1.CurrentRow.Cells["FirstName"].Value.ToString();
+
+            // Retrieve the last name of the student from the selected row
+            string lastName = dataGridView1.CurrentRow.Cells["LastName"].Value.ToString();
+
+            // Retrieve the email of the student from the selected row
+            string email = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+
+            // Retrieve the contact number of the student from the selected row
+            string contact = dataGridView1.CurrentRow.Cells["Contact"].Value.ToString();
+
+            // Retrieve the status of the student from the selected row
+            bool active = dataGridView1.CurrentRow.Cells["Status"].Value.ToString() == "Active";
+
+            // Set the textboxes to the retrieved values
+            RegNum.Text = regNo;
+            FirstName.Text = firstName;
+            LastNames.Text = lastName;
+            emails.Text = email;
+            Contactno.Text = contact;
+            StatusCheckBox.Checked = active;
         }
     }
 }
