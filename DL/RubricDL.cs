@@ -34,13 +34,13 @@ class RubricDL
     }
     public static bool DeleteRubric(int Id)
     {
-        string query = "DELETE FROM Rubric WHERE Id = '@Id'";
+        string query = "DELETE FROM Rubric WHERE Id = @Id";
         query = query.Replace("@Id", Id.ToString());
         return DBConfig.ExecuteCommand(query);
     }
     public static bool UpdateRubric(int Id, string Details, int CloId)
     {
-        string query = "UPDATE Rubric SET Details = '@Details', CloId = '@CloId' WHERE Id = '@Id'";
+        string query = "UPDATE Rubric SET Details = '@Details', CloId = @CloId WHERE Id = @Id";
         query = query.Replace("@Details", Details);
         query = query.Replace("@CloId", CloId.ToString());
         query = query.Replace("@Id", Id.ToString());
