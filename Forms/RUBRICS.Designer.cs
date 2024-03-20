@@ -32,11 +32,11 @@
             textBox1 = new TextBox();
             ADD = new Button();
             CLONAME = new Label();
-            textBox2 = new TextBox();
             UPDATECLO = new Button();
             DELETECLO = new Button();
             RUBRIC_LEVEL = new Button();
             RUBRICSGRID = new DataGridView();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)RUBRICSGRID).BeginInit();
             SuspendLayout();
             // 
@@ -85,14 +85,6 @@
             CLONAME.Size = new Size(81, 28);
             CLONAME.TabIndex = 3;
             CLONAME.Text = "CLO  ID";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(228, 186);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(162, 27);
-            textBox2.TabIndex = 4;
             // 
             // UPDATECLO
             // 
@@ -145,16 +137,24 @@
             RUBRICSGRID.Size = new Size(491, 451);
             RUBRICSGRID.TabIndex = 10;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(228, 185);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(162, 28);
+            comboBox1.TabIndex = 11;
+            // 
             // RUBRICS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(959, 753);
+            Controls.Add(comboBox1);
             Controls.Add(RUBRICSGRID);
             Controls.Add(RUBRIC_LEVEL);
             Controls.Add(DELETECLO);
             Controls.Add(UPDATECLO);
-            Controls.Add(textBox2);
             Controls.Add(CLONAME);
             Controls.Add(ADD);
             Controls.Add(textBox1);
@@ -173,10 +173,10 @@
         private TextBox textBox1;
         private Button ADD;
         private Label CLONAME;
-        private TextBox textBox2;
         private Button UPDATECLO;
         private Button DELETECLO;
         private Button RUBRIC_LEVEL;
         private DataGridView RUBRICSGRID;
+        private ComboBox comboBox1;
     }
 }
