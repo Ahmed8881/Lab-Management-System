@@ -11,6 +11,7 @@ class RubricLevelDL
     {
         return DBConfig.GetData(GetAllDataQuery);
     }
+    // To fill the ComboBox with Rubric Ids
     public static List<int> GetRubricId()
     {
         string query = "SELECT Id FROM Rubric";

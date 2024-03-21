@@ -64,7 +64,7 @@
             AddButton.TabIndex = 1;
             AddButton.Text = "ADD";
             AddButton.UseVisualStyleBackColor = false;
-            AddButton.Click += button1_Click;
+            AddButton.Click += AddButton_Click;
             // 
             // label2
             // 
@@ -76,7 +76,6 @@
             label2.Size = new Size(110, 21);
             label2.TabIndex = 3;
             label2.Text = "Rubric Details";
-            label2.Click += label2_Click;
             // 
             // DetailsBox
             // 
@@ -98,6 +97,7 @@
             UpdateButton.TabIndex = 9;
             UpdateButton.Text = "UPDATE";
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // DeleteButton
             // 
@@ -111,6 +111,7 @@
             DeleteButton.TabIndex = 10;
             DeleteButton.Text = "DELETE";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // dataGridView1
             // 
