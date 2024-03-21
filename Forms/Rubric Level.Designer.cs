@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
+            AddButton = new Button();
             label2 = new Label();
-            textBox2 = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
+            DetailsBox = new TextBox();
+            UpdateButton = new Button();
+            DeleteButton = new Button();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            IdComboBox = new ComboBox();
+            LevelComboBox = new ComboBox();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -52,19 +52,19 @@
             label1.TabIndex = 0;
             label1.Text = "Rubric ID";
             // 
-            // button1
+            // AddButton
             // 
-            button1.BackColor = SystemColors.Highlight;
-            button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(388, 402);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(101, 41);
-            button1.TabIndex = 1;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            AddButton.BackColor = SystemColors.Highlight;
+            AddButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            AddButton.ForeColor = SystemColors.ButtonHighlight;
+            AddButton.Location = new Point(388, 402);
+            AddButton.Margin = new Padding(2);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(101, 41);
+            AddButton.TabIndex = 1;
+            AddButton.Text = "ADD";
+            AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += button1_Click;
             // 
             // label2
             // 
@@ -78,39 +78,39 @@
             label2.Text = "Rubric Details";
             label2.Click += label2_Click;
             // 
-            // textBox2
+            // DetailsBox
             // 
-            textBox2.Location = new Point(176, 101);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(121, 23);
-            textBox2.TabIndex = 6;
+            DetailsBox.Location = new Point(176, 101);
+            DetailsBox.Margin = new Padding(2);
+            DetailsBox.Name = "DetailsBox";
+            DetailsBox.Size = new Size(121, 23);
+            DetailsBox.TabIndex = 6;
             // 
-            // button2
+            // UpdateButton
             // 
-            button2.BackColor = SystemColors.Highlight;
-            button2.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(537, 402);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(93, 41);
-            button2.TabIndex = 9;
-            button2.Text = "UPDATE";
-            button2.UseVisualStyleBackColor = false;
+            UpdateButton.BackColor = SystemColors.Highlight;
+            UpdateButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            UpdateButton.ForeColor = SystemColors.ButtonHighlight;
+            UpdateButton.Location = new Point(537, 402);
+            UpdateButton.Margin = new Padding(2);
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Size = new Size(93, 41);
+            UpdateButton.TabIndex = 9;
+            UpdateButton.Text = "UPDATE";
+            UpdateButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // DeleteButton
             // 
-            button3.BackColor = SystemColors.Highlight;
-            button3.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(662, 402);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(103, 41);
-            button3.TabIndex = 10;
-            button3.Text = "DELETE";
-            button3.UseVisualStyleBackColor = false;
+            DeleteButton.BackColor = SystemColors.Highlight;
+            DeleteButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            DeleteButton.ForeColor = SystemColors.ButtonHighlight;
+            DeleteButton.Location = new Point(662, 402);
+            DeleteButton.Margin = new Padding(2);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(103, 41);
+            DeleteButton.TabIndex = 10;
+            DeleteButton.Text = "DELETE";
+            DeleteButton.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -123,21 +123,21 @@
             dataGridView1.Size = new Size(497, 342);
             dataGridView1.TabIndex = 11;
             // 
-            // comboBox1
+            // IdComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(176, 60);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 12;
+            IdComboBox.FormattingEnabled = true;
+            IdComboBox.Location = new Point(176, 60);
+            IdComboBox.Name = "IdComboBox";
+            IdComboBox.Size = new Size(121, 23);
+            IdComboBox.TabIndex = 12;
             // 
-            // comboBox2
+            // LevelComboBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(176, 145);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 13;
+            LevelComboBox.FormattingEnabled = true;
+            LevelComboBox.Location = new Point(176, 145);
+            LevelComboBox.Name = "LevelComboBox";
+            LevelComboBox.Size = new Size(121, 23);
+            LevelComboBox.TabIndex = 13;
             // 
             // label3
             // 
@@ -156,14 +156,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(862, 562);
             Controls.Add(label3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(LevelComboBox);
+            Controls.Add(IdComboBox);
             Controls.Add(dataGridView1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
+            Controls.Add(DeleteButton);
+            Controls.Add(UpdateButton);
+            Controls.Add(DetailsBox);
             Controls.Add(label2);
-            Controls.Add(button1);
+            Controls.Add(AddButton);
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "Rubric_Level";
@@ -176,14 +176,14 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button AddButton;
         private Label label2;
-        private TextBox textBox2;
-        private Button button2;
-        private Button button3;
+        private TextBox DetailsBox;
+        private Button UpdateButton;
+        private Button DeleteButton;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox IdComboBox;
+        private ComboBox LevelComboBox;
         private Label label3;
     }
 }
