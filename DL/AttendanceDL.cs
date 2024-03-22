@@ -3,7 +3,7 @@ using System.Data;
 class AttendanceDL
 {
     private static DBConfig dBConfig = new DBConfig();
-    private static List<string> GetRegNo()
+    public static List<string> GetRegNo()
     {
         string query = "SELECT RegistrationNumber FROM Student";
         DataTable dt = dBConfig.GetData(query);
@@ -14,7 +14,7 @@ class AttendanceDL
         }
         return regNos;
     }
-    private static List<string> GetStatuses()
+    public static List<string> GetStatuses()
     {
         string query = "Select Name From Lookup Where Category = 'ATTENDANCE_STATUS'";
         DataTable dt = dBConfig.GetData(query);
