@@ -72,6 +72,13 @@ namespace sample.Forms
             }
             LoadData();
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Goto Assessment Components Form
+            this.Hide();
+            Assessment_Component form = new Assessment_Component();
+            form.Show();
+        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             TitleBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
