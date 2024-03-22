@@ -43,19 +43,19 @@
             // 
             CLONAME.AutoSize = true;
             CLONAME.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            CLONAME.Location = new Point(40, 64);
+            CLONAME.Location = new Point(46, 85);
             CLONAME.Margin = new Padding(2, 0, 2, 0);
             CLONAME.Name = "CLONAME";
-            CLONAME.Size = new Size(46, 19);
+            CLONAME.Size = new Size(56, 23);
             CLONAME.TabIndex = 0;
             CLONAME.Text = "Name";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(149, 64);
-            textBox1.Margin = new Padding(2);
+            textBox1.Location = new Point(170, 85);
+            textBox1.Margin = new Padding(2, 3, 2, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(126, 23);
+            textBox1.Size = new Size(143, 27);
             textBox1.TabIndex = 1;
             // 
             // dataGridView1
@@ -63,23 +63,23 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(297, 62);
-            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Location = new Point(339, 83);
+            dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(356, 266);
+            dataGridView1.Size = new Size(407, 355);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // ADDCLO
             // 
             ADDCLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ADDCLO.BackColor = SystemColors.MenuHighlight;
+            ADDCLO.BackColor = Color.FromArgb(0, 169, 255);
             ADDCLO.ForeColor = SystemColors.ControlLightLight;
-            ADDCLO.Location = new Point(312, 350);
-            ADDCLO.Margin = new Padding(2);
+            ADDCLO.Location = new Point(357, 467);
+            ADDCLO.Margin = new Padding(2, 3, 2, 3);
             ADDCLO.Name = "ADDCLO";
-            ADDCLO.Size = new Size(81, 34);
+            ADDCLO.Size = new Size(93, 45);
             ADDCLO.TabIndex = 7;
             ADDCLO.Text = "ADD";
             ADDCLO.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             UPDATECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             UPDATECLO.BackColor = SystemColors.MenuHighlight;
             UPDATECLO.ForeColor = SystemColors.ControlLightLight;
-            UPDATECLO.Location = new Point(411, 350);
-            UPDATECLO.Margin = new Padding(2);
+            UPDATECLO.Location = new Point(470, 467);
+            UPDATECLO.Margin = new Padding(2, 3, 2, 3);
             UPDATECLO.Name = "UPDATECLO";
-            UPDATECLO.Size = new Size(83, 34);
+            UPDATECLO.Size = new Size(95, 45);
             UPDATECLO.TabIndex = 8;
             UPDATECLO.Text = "UPDATE";
             UPDATECLO.UseVisualStyleBackColor = false;
@@ -104,10 +104,10 @@
             DELETECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DELETECLO.BackColor = SystemColors.MenuHighlight;
             DELETECLO.ForeColor = SystemColors.ControlLightLight;
-            DELETECLO.Location = new Point(515, 350);
-            DELETECLO.Margin = new Padding(2);
+            DELETECLO.Location = new Point(589, 467);
+            DELETECLO.Margin = new Padding(2, 3, 2, 3);
             DELETECLO.Name = "DELETECLO";
-            DELETECLO.Size = new Size(77, 34);
+            DELETECLO.Size = new Size(88, 45);
             DELETECLO.TabIndex = 9;
             DELETECLO.Text = "DELETE";
             DELETECLO.UseVisualStyleBackColor = false;
@@ -117,26 +117,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(40, 129);
+            label1.Location = new Point(46, 172);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 19);
+            label1.Size = new Size(46, 23);
             label1.TabIndex = 10;
             label1.Text = "Date";
             label1.Click += label1_Click;
             // 
             // DatePicker
             // 
-            DatePicker.Location = new Point(92, 129);
+            DatePicker.Location = new Point(105, 172);
+            DatePicker.Margin = new Padding(3, 4, 3, 4);
             DatePicker.Name = "DatePicker";
-            DatePicker.Size = new Size(200, 23);
+            DatePicker.Size = new Size(228, 27);
             DatePicker.TabIndex = 11;
             // 
             // CLOS
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(671, 399);
+            ClientSize = new Size(767, 532);
             Controls.Add(DatePicker);
             Controls.Add(label1);
             Controls.Add(DELETECLO);
@@ -145,7 +146,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(CLONAME);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "CLOS";
             Text = "CLOS";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
