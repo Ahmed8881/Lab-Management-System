@@ -40,67 +40,71 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(104, 60);
+            label1.Location = new Point(119, 80);
             label1.Name = "label1";
-            label1.Size = new Size(43, 15);
+            label1.Size = new Size(55, 20);
             label1.TabIndex = 0;
             label1.Text = "RegNo";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(104, 100);
+            label2.Location = new Point(119, 133);
             label2.Name = "label2";
-            label2.Size = new Size(31, 15);
+            label2.Size = new Size(41, 20);
             label2.TabIndex = 1;
             label2.Text = "Date";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(104, 142);
+            label3.Location = new Point(119, 189);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(49, 20);
             label3.TabIndex = 2;
             label3.Text = "Status";
             // 
             // RegistrationBox
             // 
             RegistrationBox.FormattingEnabled = true;
-            RegistrationBox.Location = new Point(209, 60);
+            RegistrationBox.Location = new Point(239, 80);
+            RegistrationBox.Margin = new Padding(3, 4, 3, 4);
             RegistrationBox.Name = "RegistrationBox";
-            RegistrationBox.Size = new Size(121, 23);
+            RegistrationBox.Size = new Size(138, 28);
             RegistrationBox.TabIndex = 3;
             // 
             // StatusBox
             // 
             StatusBox.FormattingEnabled = true;
-            StatusBox.Location = new Point(209, 139);
+            StatusBox.Location = new Point(239, 185);
+            StatusBox.Margin = new Padding(3, 4, 3, 4);
             StatusBox.Name = "StatusBox";
-            StatusBox.Size = new Size(121, 23);
+            StatusBox.Size = new Size(138, 28);
             StatusBox.TabIndex = 4;
             // 
             // DatePicker
             // 
-            DatePicker.Location = new Point(209, 100);
+            DatePicker.Location = new Point(239, 133);
+            DatePicker.Margin = new Padding(3, 4, 3, 4);
             DatePicker.Name = "DatePicker";
-            DatePicker.Size = new Size(200, 23);
+            DatePicker.Size = new Size(228, 27);
             DatePicker.TabIndex = 5;
             // 
             // button1
             // 
-            button1.Location = new Point(222, 193);
+            button1.Location = new Point(254, 257);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(89, 41);
+            button1.Size = new Size(102, 55);
             button1.TabIndex = 6;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
             // 
             // Attendence
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(505, 298);
+            ClientSize = new Size(577, 397);
             Controls.Add(button1);
             Controls.Add(DatePicker);
             Controls.Add(StatusBox);
@@ -108,6 +112,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Attendence";
             Text = "Attendence";
             ResumeLayout(false);

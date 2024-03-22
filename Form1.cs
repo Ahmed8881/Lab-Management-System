@@ -164,7 +164,7 @@ namespace sample
 
         private void A_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
@@ -185,6 +185,11 @@ namespace sample
         private void A_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.ASSESSMENTS(), sender);
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

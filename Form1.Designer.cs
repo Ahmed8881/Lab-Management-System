@@ -68,9 +68,11 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(196, 835);
             panelMenu.TabIndex = 0;
+            panelMenu.Paint += this.panelMenu_Paint;
             // 
             // A
             // 
+            A.BackColor = Color.FromArgb(51, 51, 76);
             A.Dock = DockStyle.Top;
             A.FlatAppearance.BorderSize = 0;
             A.FlatStyle = FlatStyle.Flat;
@@ -86,7 +88,7 @@
             A.Text = "ASSESSMENT";
             A.TextAlign = ContentAlignment.MiddleLeft;
             A.TextImageRelation = TextImageRelation.ImageBeforeText;
-            A.UseVisualStyleBackColor = true;
+            A.UseVisualStyleBackColor = false;
             A.Click += A_Click_1;
             // 
             // button6
@@ -110,6 +112,7 @@
             // 
             // Attendence
             // 
+            Attendence.BackColor = Color.FromArgb(51, 51, 76);
             Attendence.Dock = DockStyle.Top;
             Attendence.FlatAppearance.BorderSize = 0;
             Attendence.FlatStyle = FlatStyle.Flat;
@@ -125,11 +128,12 @@
             Attendence.Text = "Attendence";
             Attendence.TextAlign = ContentAlignment.MiddleLeft;
             Attendence.TextImageRelation = TextImageRelation.ImageBeforeText;
-            Attendence.UseVisualStyleBackColor = true;
+            Attendence.UseVisualStyleBackColor = false;
             Attendence.Click += Attendence_Click;
             // 
             // Result
             // 
+            Result.BackColor = Color.FromArgb(51, 51, 76);
             Result.Dock = DockStyle.Top;
             Result.FlatAppearance.BorderSize = 0;
             Result.FlatStyle = FlatStyle.Flat;
@@ -145,11 +149,12 @@
             Result.Text = "   Result";
             Result.TextAlign = ContentAlignment.MiddleLeft;
             Result.TextImageRelation = TextImageRelation.ImageBeforeText;
-            Result.UseVisualStyleBackColor = true;
+            Result.UseVisualStyleBackColor = false;
             Result.Click += Result_Click;
             // 
             // Rubric
             // 
+            Rubric.BackColor = Color.FromArgb(51, 51, 76);
             Rubric.Dock = DockStyle.Top;
             Rubric.FlatAppearance.BorderSize = 0;
             Rubric.FlatStyle = FlatStyle.Flat;
@@ -165,11 +170,12 @@
             Rubric.Text = "  Rubric";
             Rubric.TextAlign = ContentAlignment.MiddleLeft;
             Rubric.TextImageRelation = TextImageRelation.ImageBeforeText;
-            Rubric.UseVisualStyleBackColor = true;
+            Rubric.UseVisualStyleBackColor = false;
             Rubric.Click += Rubric_Click;
             // 
             // CLO
             // 
+            CLO.BackColor = Color.FromArgb(51, 51, 76);
             CLO.Dock = DockStyle.Top;
             CLO.FlatAppearance.BorderSize = 0;
             CLO.FlatStyle = FlatStyle.Flat;
@@ -185,11 +191,12 @@
             CLO.Text = "    CLO";
             CLO.TextAlign = ContentAlignment.MiddleLeft;
             CLO.TextImageRelation = TextImageRelation.ImageBeforeText;
-            CLO.UseVisualStyleBackColor = true;
+            CLO.UseVisualStyleBackColor = false;
             CLO.Click += CLO_Click;
             // 
             // Student
             // 
+            Student.BackColor = Color.FromArgb(51, 51, 76);
             Student.Dock = DockStyle.Top;
             Student.FlatAppearance.BorderSize = 0;
             Student.FlatStyle = FlatStyle.Flat;
@@ -205,18 +212,19 @@
             Student.Text = "Students";
             Student.TextAlign = ContentAlignment.MiddleLeft;
             Student.TextImageRelation = TextImageRelation.ImageBeforeText;
-            Student.UseVisualStyleBackColor = true;
+            Student.UseVisualStyleBackColor = false;
             Student.Click += Student_Click;
             // 
             // panelLogo
             // 
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            panelLogo.BackColor = Color.FromArgb(51, 51, 76);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Margin = new Padding(2);
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(196, 64);
             panelLogo.TabIndex = 1;
+            panelLogo.Paint += panelLogo_Paint;
             // 
             // panelTitleBar
             // 
