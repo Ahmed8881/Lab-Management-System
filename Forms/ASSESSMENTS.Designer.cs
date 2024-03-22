@@ -145,6 +145,7 @@
             button4.TabIndex = 10;
             button4.Text = "Go To Assessment Comp\r\n Page\r\n";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // label1
             // 
