@@ -20,6 +20,8 @@ namespace sample.Forms
         private void LoadData()
         {
             dataGridView1.DataSource = AssessmentComponentDL.GetData();
+            RubricIdBox.Items.Clear();
+            AssessmentIdBox.Items.Clear();
             RubricIdBox.DataSource = AssessmentComponentDL.GetRubricIds();
             AssessmentIdBox.DataSource = AssessmentComponentDL.GetAssessmentIds();
         }
