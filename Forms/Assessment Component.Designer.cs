@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            UpdateButton = new Button();
+            DeleteButton = new Button();
+            AddButton = new Button();
+            NameBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            MarksBox = new TextBox();
+            AssessmentIdBox = new ComboBox();
+            RubricIdBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -45,121 +47,131 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(337, 38);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(295, 28);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(613, 455);
+            dataGridView1.Size = new Size(536, 341);
             dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // UpdateButton
             // 
-            textBox1.ForeColor = Color.DarkGray;
-            textBox1.Location = new Point(44, 55);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(112, 27);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Rubric ID";
+            UpdateButton.Location = new Point(474, 402);
+            UpdateButton.Margin = new Padding(2);
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Size = new Size(70, 30);
+            UpdateButton.TabIndex = 3;
+            UpdateButton.Text = "UPDATE";
+            UpdateButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DeleteButton
             // 
-            button2.Location = new Point(146, 578);
-            button2.Margin = new Padding(2, 2, 2, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(80, 40);
-            button2.TabIndex = 3;
-            button2.Text = "UPDATE";
-            button2.UseVisualStyleBackColor = true;
+            DeleteButton.Location = new Point(593, 402);
+            DeleteButton.Margin = new Padding(2);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(70, 30);
+            DeleteButton.TabIndex = 4;
+            DeleteButton.Text = "DELETE";
+            DeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // AddButton
             // 
-            button3.Location = new Point(163, 413);
-            button3.Margin = new Padding(2, 2, 2, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(80, 40);
-            button3.TabIndex = 4;
-            button3.Text = "DELETE";
-            button3.UseVisualStyleBackColor = true;
+            AddButton.Location = new Point(358, 402);
+            AddButton.Margin = new Padding(2);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(70, 30);
+            AddButton.TabIndex = 5;
+            AddButton.Text = "ADD";
+            AddButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // NameBox
             // 
-            button1.Location = new Point(163, 510);
-            button1.Margin = new Padding(2, 2, 2, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(80, 40);
-            button1.TabIndex = 5;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = true;
+            NameBox.ForeColor = Color.DarkGray;
+            NameBox.Location = new Point(108, 41);
+            NameBox.Margin = new Padding(2);
+            NameBox.Name = "NameBox";
+            NameBox.Size = new Size(143, 23);
+            NameBox.TabIndex = 6;
             // 
-            // textBox2
+            // label1
             // 
-            textBox2.ForeColor = Color.DarkGray;
-            textBox2.Location = new Point(176, 55);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(110, 27);
-            textBox2.TabIndex = 6;
-            textBox2.Text = "Rubric Detail";
+            label1.AutoSize = true;
+            label1.Location = new Point(28, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Name";
             // 
-            // textBox3
+            // label2
             // 
-            textBox3.ForeColor = Color.DarkGray;
-            textBox3.Location = new Point(44, 123);
-            textBox3.Margin = new Padding(2, 2, 2, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(112, 27);
-            textBox3.TabIndex = 7;
-            textBox3.Text = "Assessment ID";
-            textBox3.TextChanged += textBox3_TextChanged;
+            label2.AutoSize = true;
+            label2.Location = new Point(28, 158);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 15);
+            label2.TabIndex = 8;
+            label2.Text = "RubricId";
             // 
-            // textBox4
+            // label3
             // 
-            textBox4.ForeColor = Color.DarkGray;
-            textBox4.Location = new Point(176, 123);
-            textBox4.Margin = new Padding(2, 2, 2, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(110, 27);
-            textBox4.TabIndex = 8;
-            textBox4.Text = "Assessment Title";
+            label3.AutoSize = true;
+            label3.Location = new Point(28, 121);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 15);
+            label3.TabIndex = 9;
+            label3.Text = " AssessmentId";
             // 
-            // textBox5
+            // label4
             // 
-            textBox5.ForeColor = Color.DarkGray;
-            textBox5.Location = new Point(44, 201);
-            textBox5.Margin = new Padding(2, 2, 2, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(112, 27);
-            textBox5.TabIndex = 9;
-            textBox5.Text = "Name";
-            textBox5.TextChanged += textBox5_TextChanged;
+            label4.AutoSize = true;
+            label4.Location = new Point(28, 82);
+            label4.Name = "label4";
+            label4.Size = new Size(64, 15);
+            label4.TabIndex = 10;
+            label4.Text = "TotalMarks";
             // 
-            // textBox6
+            // MarksBox
             // 
-            textBox6.ForeColor = Color.DarkGray;
-            textBox6.Location = new Point(176, 201);
-            textBox6.Margin = new Padding(2, 2, 2, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(110, 27);
-            textBox6.TabIndex = 10;
-            textBox6.Text = "Total Marks";
+            MarksBox.ForeColor = Color.DarkGray;
+            MarksBox.Location = new Point(108, 82);
+            MarksBox.Margin = new Padding(2);
+            MarksBox.Name = "MarksBox";
+            MarksBox.Size = new Size(143, 23);
+            MarksBox.TabIndex = 11;
+            // 
+            // AssessmentIdBox
+            // 
+            AssessmentIdBox.FormattingEnabled = true;
+            AssessmentIdBox.Location = new Point(130, 118);
+            AssessmentIdBox.Name = "AssessmentIdBox";
+            AssessmentIdBox.Size = new Size(121, 23);
+            AssessmentIdBox.TabIndex = 12;
+            // 
+            // RubricIdBox
+            // 
+            RubricIdBox.FormattingEnabled = true;
+            RubricIdBox.Location = new Point(130, 155);
+            RubricIdBox.Name = "RubricIdBox";
+            RubricIdBox.Size = new Size(121, 23);
+            RubricIdBox.TabIndex = 13;
             // 
             // Assessment_Component
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(988, 754);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(864, 566);
+            Controls.Add(RubricIdBox);
+            Controls.Add(AssessmentIdBox);
+            Controls.Add(MarksBox);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(NameBox);
+            Controls.Add(AddButton);
+            Controls.Add(DeleteButton);
+            Controls.Add(UpdateButton);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Assessment_Component";
             Text = "Assessment_Component";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -170,14 +182,16 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private Button button2;
-        private Button button3;
-        private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private Button UpdateButton;
+        private Button DeleteButton;
+        private Button AddButton;
+        private TextBox NameBox;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private TextBox MarksBox;
+        private ComboBox AssessmentIdBox;
+        private ComboBox RubricIdBox;
     }
 }
