@@ -31,9 +31,9 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
+            RegistrationBox = new ComboBox();
+            StatusBox = new ComboBox();
+            DatePicker = new DateTimePicker();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -64,28 +64,28 @@
             label3.TabIndex = 2;
             label3.Text = "Status";
             // 
-            // comboBox1
+            // RegistrationBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(209, 60);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 3;
+            RegistrationBox.FormattingEnabled = true;
+            RegistrationBox.Location = new Point(209, 60);
+            RegistrationBox.Name = "RegistrationBox";
+            RegistrationBox.Size = new Size(121, 23);
+            RegistrationBox.TabIndex = 3;
             // 
-            // comboBox2
+            // StatusBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(209, 139);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 4;
+            StatusBox.FormattingEnabled = true;
+            StatusBox.Location = new Point(209, 139);
+            StatusBox.Name = "StatusBox";
+            StatusBox.Size = new Size(121, 23);
+            StatusBox.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // DatePicker
             // 
-            dateTimePicker1.Location = new Point(209, 100);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 5;
+            DatePicker.Location = new Point(209, 100);
+            DatePicker.Name = "DatePicker";
+            DatePicker.Size = new Size(200, 23);
+            DatePicker.TabIndex = 5;
             // 
             // button1
             // 
@@ -102,9 +102,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(505, 298);
             Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(DatePicker);
+            Controls.Add(StatusBox);
+            Controls.Add(RegistrationBox);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -119,9 +119,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private DateTimePicker dateTimePicker1;
+        private ComboBox RegistrationBox;
+        private ComboBox StatusBox;
+        private DateTimePicker DatePicker;
         private Button button1;
     }
 }
