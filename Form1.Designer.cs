@@ -68,7 +68,6 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(196, 835);
             panelMenu.TabIndex = 0;
-            panelMenu.Paint += this.panelMenu_Paint;
             // 
             // A
             // 
