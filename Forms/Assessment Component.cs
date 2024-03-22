@@ -50,7 +50,7 @@ namespace sample.Forms
         }
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            int Id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            int Id = int.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
             string name = NameBox.Text;
             int TotalMarks = int.Parse(MarksBox.Text);
             int RubricId = int.Parse(RubricIdBox.SelectedItem.ToString());
@@ -69,7 +69,7 @@ namespace sample.Forms
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            int Id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            int Id = int.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
             if (AssessmentComponentDL.DeleteData(Id))
             {
                 MessageBox.Show("Data Deleted Successfully");

@@ -32,7 +32,7 @@ class AssessmentComponentDL
     }
     public static bool AddData(string Name, int RubricId, int AssessmentId, int TotalMarks)
     {
-        string query = "INSERT INTO AssessmentComponent(Name, RubricId, AssessmentId, TotalMarks) VALUES('@Name', @RubricId, @AssessmentId, @TotalMarks)";
+        string query = "INSERT INTO AssessmentComponent(Name, RubricId, AssessmentId, TotalMarks, DateCreated,DateUpdated) VALUES('@Name', @RubricId, @AssessmentId, @TotalMarks,GetDate(),GetDate())";
         query = query.Replace("@Name", Name);
         query = query.Replace("@RubricId", RubricId.ToString());
         query = query.Replace("@AssessmentId", AssessmentId.ToString());
@@ -41,7 +41,7 @@ class AssessmentComponentDL
     }
     public static bool UpdateData(int Id, string Name, int RubricId, int AssessmentId, int TotalMarks)
     {
-        string query = "UPDATE AssessmentComponent SET Name = '@Name', RubricId = @RubricId, AssessmentId = @AssessmentId, TotalMarks = @TotalMarks WHERE Id = @Id";
+        string query = "UPDATE AssessmentComponent SET Name = '@Name', RubricId = @RubricId, AssessmentId = @AssessmentId, TotalMarks = @TotalMarks, DateUpdated = GetDate() WHERE Id = @Id";
         query = query.Replace("@Name", Name);
         query = query.Replace("@RubricId", RubricId.ToString());
         query = query.Replace("@AssessmentId", AssessmentId.ToString());
