@@ -15,6 +15,14 @@ namespace sample.Forms
         public Attendence()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            RegistrationBox.Items.Clear();
+            StatusBox.Items.Clear();
+            RegistrationBox.DataSource = AttendanceDL.GetRegNo();
+            StatusBox.DataSource = AttendanceDL.GetStatuses();
         }
     }
 }
