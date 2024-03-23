@@ -49,6 +49,7 @@
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+
             SuspendLayout();
             // 
             // panelMenu
