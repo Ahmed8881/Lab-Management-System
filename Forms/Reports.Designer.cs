@@ -47,9 +47,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(28, 42);
             label1.Name = "label1";
-            label1.Size = new Size(60, 20);
+            label1.Size = new Size(69, 23);
             label1.TabIndex = 1;
             label1.Text = "Reports";
             // 
@@ -69,7 +70,7 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 115);
+            dataGridView1.Location = new Point(28, 164);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(751, 324);
@@ -80,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(826, 539);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(label1);

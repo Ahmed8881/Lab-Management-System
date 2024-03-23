@@ -40,27 +40,30 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(119, 80);
             label1.Name = "label1";
-            label1.Size = new Size(55, 20);
+            label1.Size = new Size(63, 23);
             label1.TabIndex = 0;
             label1.Text = "RegNo";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
             label2.Location = new Point(119, 133);
             label2.Name = "label2";
-            label2.Size = new Size(41, 20);
+            label2.Size = new Size(46, 23);
             label2.TabIndex = 1;
             label2.Text = "Date";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Yu Gothic UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic);
             label3.Location = new Point(119, 189);
             label3.Name = "label3";
-            label3.Size = new Size(49, 20);
+            label3.Size = new Size(57, 23);
             label3.TabIndex = 2;
             label3.Text = "Status";
             // 
