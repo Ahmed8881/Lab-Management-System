@@ -47,11 +47,11 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(337, 37);
+            dataGridView1.Location = new Point(370, 37);
             dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(613, 455);
+            dataGridView1.Size = new Size(580, 455);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -94,43 +94,47 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 59);
+            label1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label1.Location = new Point(43, 56);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(66, 28);
             label1.TabIndex = 7;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             label2.Location = new Point(32, 211);
             label2.Name = "label2";
-            label2.Size = new Size(64, 20);
+            label2.Size = new Size(95, 28);
             label2.TabIndex = 8;
-            label2.Text = "RubricId";
+            label2.Text = "Rubric ID";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(32, 161);
+            label3.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label3.Location = new Point(21, 161);
             label3.Name = "label3";
-            label3.Size = new Size(102, 20);
+            label3.Size = new Size(152, 28);
             label3.TabIndex = 9;
-            label3.Text = " AssessmentId";
+            label3.Text = " Assessment ID";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             label4.Location = new Point(32, 109);
             label4.Name = "label4";
-            label4.Size = new Size(81, 20);
+            label4.Size = new Size(110, 28);
             label4.TabIndex = 10;
             label4.Text = "TotalMarks";
             // 
             // AssessmentIdBox
             // 
             AssessmentIdBox.FormattingEnabled = true;
-            AssessmentIdBox.Location = new Point(149, 157);
+            AssessmentIdBox.Location = new Point(182, 165);
             AssessmentIdBox.Margin = new Padding(3, 4, 3, 4);
             AssessmentIdBox.Name = "AssessmentIdBox";
             AssessmentIdBox.Size = new Size(138, 28);
@@ -139,7 +143,7 @@
             // RubricIdBox
             // 
             RubricIdBox.FormattingEnabled = true;
-            RubricIdBox.Location = new Point(149, 207);
+            RubricIdBox.Location = new Point(182, 215);
             RubricIdBox.Margin = new Padding(3, 4, 3, 4);
             RubricIdBox.Name = "RubricIdBox";
             RubricIdBox.Size = new Size(138, 28);
@@ -147,7 +151,7 @@
             // 
             // NameBox
             // 
-            NameBox.Location = new Point(149, 48);
+            NameBox.Location = new Point(182, 60);
             NameBox.Margin = new Padding(3, 4, 3, 4);
             NameBox.Name = "NameBox";
             NameBox.Size = new Size(138, 27);
@@ -155,7 +159,7 @@
             // 
             // MarksBox
             // 
-            MarksBox.Location = new Point(149, 105);
+            MarksBox.Location = new Point(182, 113);
             MarksBox.Margin = new Padding(3, 4, 3, 4);
             MarksBox.Name = "MarksBox";
             MarksBox.Size = new Size(138, 27);
