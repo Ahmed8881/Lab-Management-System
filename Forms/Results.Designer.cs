@@ -73,12 +73,13 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.Highlight;
             button1.Location = new Point(84, 361);
             button1.Name = "button1";
             button1.Size = new Size(95, 41);
             button1.TabIndex = 3;
             button1.Text = "Evalute";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -97,7 +98,6 @@
             label3.Size = new Size(89, 20);
             label3.TabIndex = 5;
             label3.Text = "Rubric Level";
-            
             // 
             // label4
             // 
