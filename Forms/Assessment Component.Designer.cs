@@ -51,7 +51,7 @@
             dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(580, 455);
+            dataGridView1.Size = new Size(580, 517);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -60,10 +60,12 @@
             UpdateButton.BackColor = SystemColors.Highlight;
             UpdateButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             UpdateButton.ForeColor = SystemColors.ControlLightLight;
-            UpdateButton.Location = new Point(552, 536);
+            UpdateButton.Image = Properties.Resources.icons8_update_done_24;
+            UpdateButton.ImageAlign = ContentAlignment.MiddleLeft;
+            UpdateButton.Location = new Point(572, 606);
             UpdateButton.Margin = new Padding(2, 3, 2, 3);
             UpdateButton.Name = "UpdateButton";
-            UpdateButton.Size = new Size(80, 40);
+            UpdateButton.Size = new Size(142, 64);
             UpdateButton.TabIndex = 3;
             UpdateButton.Text = "UPDATE";
             UpdateButton.UseVisualStyleBackColor = false;
@@ -74,10 +76,12 @@
             DeleteButton.BackColor = SystemColors.Highlight;
             DeleteButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             DeleteButton.ForeColor = SystemColors.ControlLightLight;
-            DeleteButton.Location = new Point(688, 536);
+            DeleteButton.Image = Properties.Resources.icons8_delete_48__1_;
+            DeleteButton.ImageAlign = ContentAlignment.MiddleLeft;
+            DeleteButton.Location = new Point(737, 606);
             DeleteButton.Margin = new Padding(2, 3, 2, 3);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(80, 40);
+            DeleteButton.Size = new Size(164, 64);
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "DELETE";
             DeleteButton.UseVisualStyleBackColor = false;
@@ -88,10 +92,12 @@
             AddButton.BackColor = SystemColors.Highlight;
             AddButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             AddButton.ForeColor = SystemColors.ControlLightLight;
-            AddButton.Location = new Point(419, 536);
+            AddButton.Image = Properties.Resources.icons8_add_50;
+            AddButton.ImageAlign = ContentAlignment.MiddleLeft;
+            AddButton.Location = new Point(390, 606);
             AddButton.Margin = new Padding(2, 3, 2, 3);
             AddButton.Name = "AddButton";
-            AddButton.Size = new Size(80, 40);
+            AddButton.Size = new Size(163, 64);
             AddButton.TabIndex = 5;
             AddButton.Text = "ADD";
             AddButton.UseVisualStyleBackColor = false;
