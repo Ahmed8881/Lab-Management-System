@@ -151,13 +151,9 @@ namespace sample
 
         private void Result_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Results(), sender);
         }
 
-        private void Attendence_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
 
         private void Rubric_Click(object sender, EventArgs e)
         {
@@ -166,7 +162,7 @@ namespace sample
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -184,6 +180,23 @@ namespace sample
             btnCloseChildForm.Visible = false;
 
 
+        }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Reports(), sender);
+        }
+
+
+
+        private void A_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.ASSESSMENTS(), sender);
+        }
+
+        private void Attendence_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Attendence(), sender);
         }
     }
 

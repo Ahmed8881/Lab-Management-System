@@ -40,13 +40,13 @@
             Student = new Button();
             panelLogo = new Panel();
             panelTitleBar = new Panel();
+            btnCloseChildForm = new Button();
             lblTitle = new Label();
             panelDesktopPanel = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
-            btnCloseChildForm = new Button();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
@@ -91,6 +91,7 @@
             Reports.TextAlign = ContentAlignment.MiddleLeft;
             Reports.TextImageRelation = TextImageRelation.ImageBeforeText;
             Reports.UseVisualStyleBackColor = false;
+            Reports.Click += Reports_Click;
             // 
             // A
             // 
@@ -111,6 +112,7 @@
             A.TextAlign = ContentAlignment.MiddleLeft;
             A.TextImageRelation = TextImageRelation.ImageBeforeText;
             A.UseVisualStyleBackColor = false;
+            A.Click += A_Click;
             // 
             // button6
             // 
@@ -258,6 +260,19 @@
             panelTitleBar.Size = new Size(853, 95);
             panelTitleBar.TabIndex = 1;
             // 
+            // btnCloseChildForm
+            // 
+            btnCloseChildForm.Dock = DockStyle.Left;
+            btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
+            btnCloseChildForm.Image = Properties.Resources.icons8_close_64;
+            btnCloseChildForm.Location = new Point(0, 0);
+            btnCloseChildForm.Name = "btnCloseChildForm";
+            btnCloseChildForm.Size = new Size(72, 95);
+            btnCloseChildForm.TabIndex = 1;
+            btnCloseChildForm.UseVisualStyleBackColor = true;
+            btnCloseChildForm.Click += btnCloseChildForm_Click;
+            // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.None;
@@ -332,19 +347,6 @@
             label2.Size = new Size(279, 37);
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
-            // 
-            // btnCloseChildForm
-            // 
-            btnCloseChildForm.Dock = DockStyle.Left;
-            btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
-            btnCloseChildForm.Image = Properties.Resources.icons8_close_64;
-            btnCloseChildForm.Location = new Point(0, 0);
-            btnCloseChildForm.Name = "btnCloseChildForm";
-            btnCloseChildForm.Size = new Size(72, 95);
-            btnCloseChildForm.TabIndex = 1;
-            btnCloseChildForm.UseVisualStyleBackColor = true;
-            btnCloseChildForm.Click += btnCloseChildForm_Click;
             // 
             // Form1
             // 
