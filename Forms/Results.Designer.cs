@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results));
             comboBox1 = new ComboBox();
             label1 = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -75,11 +76,13 @@
             // button1
             // 
             button1.BackColor = SystemColors.Highlight;
-            button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            button1.Font = new Font("Yu Gothic UI Semibold", 16F, FontStyle.Bold | FontStyle.Italic);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(789, 146);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(781, 131);
             button1.Name = "button1";
-            button1.Size = new Size(95, 41);
+            button1.Size = new Size(198, 70);
             button1.TabIndex = 3;
             button1.Text = "Evalute";
             button1.UseVisualStyleBackColor = false;
