@@ -24,5 +24,26 @@ namespace sample.Forms
             RegistrationBox.DataSource = AttendanceDL.GetRegNo();
             StatusBox.DataSource = AttendanceDL.GetStatuses();
         }
+        private bool AreAllFieldsEmpty()
+        {
+            return RegistrationBox.Text == "" || StatusBox.Text == "";
+        }
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            if (AreAllFieldsEmpty())
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
+            AttendanceBL attendance = new AttendanceBL(RegistrationBox.Text, StatusBox.Text, DateTime.Now);
+            if (AttendanceDL.SaveAttendance(attendance))
+            {
+                MessageBox.Show("Attendance Saved Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Failed to save attendance");
+            }
+        }
     }
 }
