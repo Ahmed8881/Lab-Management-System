@@ -31,12 +31,14 @@ namespace sample.Forms
                 comboBox1.Items.Add(id);
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private bool AreAllFieldEmpty()
         {
-
+            if (textBox1.Text == "" && comboBox1.SelectedIndex == 0)
+            {
+                return true;
+            }
+            return false;
         }
-
         private void RUBRIC_LEVEL_Click(object sender, EventArgs e)
         {
             Rubric_Level rubricLevel = new Rubric_Level();
@@ -44,6 +46,11 @@ namespace sample.Forms
         }
         private void ADD_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
             string details = textBox1.Text;
             int cloId = int.Parse(comboBox1.SelectedItem.ToString());
             if (RubricDL.AddRubric(details, cloId))
@@ -58,6 +65,16 @@ namespace sample.Forms
         }
         private void UPDATECLO_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (RUBRICSGRID.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             string details = textBox1.Text;
             int cloId = int.Parse(comboBox1.SelectedItem.ToString());
             int id = int.Parse(RUBRICSGRID.CurrentRow.Cells["Id"].Value.ToString());
@@ -73,6 +90,11 @@ namespace sample.Forms
         }
         private void DELETECLO_Click(object sender, EventArgs e)
         {
+            if (RUBRICSGRID.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             int id = int.Parse(RUBRICSGRID.CurrentRow.Cells["Id"].Value.ToString());
             if (RubricDL.DeleteRubric(id))
             {
