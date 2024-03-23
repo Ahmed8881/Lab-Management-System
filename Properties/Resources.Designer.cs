@@ -73,6 +73,16 @@ namespace sample.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_48__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-48 (1)", resourceCulture);

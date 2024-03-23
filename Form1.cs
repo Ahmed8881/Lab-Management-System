@@ -13,6 +13,7 @@ namespace sample
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
 
         }
         private void SetIdealFormSize()
@@ -83,6 +84,7 @@ namespace sample
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -162,10 +164,27 @@ namespace sample
             OpenChildForm(new Forms.RUBRICS(), sender);
         }
 
-      
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            Reset();
+
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(65, 105, 225);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
 
 
-       
+        }
     }
 
 }

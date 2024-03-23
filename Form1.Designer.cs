@@ -46,6 +46,7 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
+            btnCloseChildForm = new Button();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
@@ -90,7 +91,6 @@
             Reports.TextAlign = ContentAlignment.MiddleLeft;
             Reports.TextImageRelation = TextImageRelation.ImageBeforeText;
             Reports.UseVisualStyleBackColor = false;
-          
             // 
             // A
             // 
@@ -111,7 +111,6 @@
             A.TextAlign = ContentAlignment.MiddleLeft;
             A.TextImageRelation = TextImageRelation.ImageBeforeText;
             A.UseVisualStyleBackColor = false;
-           
             // 
             // button6
             // 
@@ -246,11 +245,11 @@
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(196, 64);
             panelLogo.TabIndex = 1;
-           
             // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.RoyalBlue;
+            panelTitleBar.Controls.Add(btnCloseChildForm);
             panelTitleBar.Controls.Add(lblTitle);
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(196, 0);
@@ -284,7 +283,6 @@
             panelDesktopPanel.Name = "panelDesktopPanel";
             panelDesktopPanel.Size = new Size(853, 740);
             panelDesktopPanel.TabIndex = 2;
-        
             // 
             // label1
             // 
@@ -310,7 +308,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-           
             // 
             // label3
             // 
@@ -335,7 +332,19 @@
             label2.Size = new Size(279, 37);
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
-        
+            // 
+            // btnCloseChildForm
+            // 
+            btnCloseChildForm.Dock = DockStyle.Left;
+            btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
+            btnCloseChildForm.Image = Properties.Resources.icons8_close_64;
+            btnCloseChildForm.Location = new Point(0, 0);
+            btnCloseChildForm.Name = "btnCloseChildForm";
+            btnCloseChildForm.Size = new Size(72, 95);
+            btnCloseChildForm.TabIndex = 1;
+            btnCloseChildForm.UseVisualStyleBackColor = true;
+            btnCloseChildForm.Click += btnCloseChildForm_Click;
             // 
             // Form1
             // 
@@ -376,5 +385,6 @@
         private Label label1;
         private Button A;
         private Button Reports;
+        private Button btnCloseChildForm;
     }
 }
