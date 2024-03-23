@@ -18,18 +18,23 @@ class AttendanceBL
     public int GetStudentID()
     {
         string query = "SELECT Id FROM Student WHERE RegistrationNumber = '" + RegNo + "'";
+        dBConfig.OpenConnection();
         DataTable dt = dBConfig.GetData(query);
+        dBConfig.CloseConnection();
         return Convert.ToInt32(dt.Rows[0]["Id"]);
     }
     public int GetStatusID()
     {
         string query = "SELECT LookupID FROM Lookup WHERE Name = '" + Status + "'";
+        dBConfig.OpenConnection();
         DataTable dt = dBConfig.GetData(query);
+        dBConfig.CloseConnection();
         return Convert.ToInt32(dt.Rows[0]["LookupID"]);
     }
     public int GetAttendanceID()
     {
         string query = "Select Id from ClassAttendance where AttendanceDate = @Date";
+        dBConfig.OpenConnection();
         SqlCommand cmd = new SqlCommand(query, dBConfig.GetConnection());
         cmd.Parameters.AddWithValue("@Date", Date);
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -44,6 +49,7 @@ class AttendanceBL
             cmd.ExecuteNonQuery();
             return GetAttendanceID();
         }
+        dBConfig.CloseConnection();
         return Convert.ToInt32(dt.Rows[0]["Id"]);
     }
 }
