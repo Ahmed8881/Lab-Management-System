@@ -35,6 +35,8 @@
             StatusBox = new ComboBox();
             DatePicker = new DateTimePicker();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -100,7 +102,7 @@
             button1.ForeColor = SystemColors.ControlLightLight;
             button1.Image = Properties.Resources.icons8_save_50;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(179, 254);
+            button1.Location = new Point(599, 165);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.RightToLeft = RightToLeft.No;
@@ -110,11 +112,22 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += SaveButton_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(142, 272);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(676, 209);
+            dataGridView1.TabIndex = 7;
+            // 
             // Attendence
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(577, 397);
+            ClientSize = new Size(961, 527);
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(DatePicker);
             Controls.Add(StatusBox);
@@ -125,6 +138,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Attendence";
             Text = "Attendence";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +152,6 @@
         private ComboBox StatusBox;
         private DateTimePicker DatePicker;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }
