@@ -11,7 +11,7 @@ class AttendanceDL
         List<string> regNos = new List<string>();
         foreach (DataRow dr in dt.Rows)
         {
-            regNos.Add(dr["RegistrationNo"].ToString());
+            regNos.Add(dr["RegistrationNumber"].ToString());
         }
         return regNos;
     }
