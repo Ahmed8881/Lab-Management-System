@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudents));
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DELETEST = new Button();
             UPDATEST = new Button();
             ADDBUTTON = new Button();
@@ -53,7 +53,7 @@
             // DELETEST
             // 
             DELETEST.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            DELETEST.BackColor = SystemColors.MenuHighlight;
+            DELETEST.BackColor = SystemColors.Highlight;
             DELETEST.FlatStyle = FlatStyle.Flat;
             DELETEST.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             DELETEST.ForeColor = SystemColors.ControlLightLight;
@@ -71,7 +71,7 @@
             // UPDATEST
             // 
             UPDATEST.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            UPDATEST.BackColor = SystemColors.MenuHighlight;
+            UPDATEST.BackColor = SystemColors.Highlight;
             UPDATEST.FlatStyle = FlatStyle.Flat;
             UPDATEST.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             UPDATEST.ForeColor = SystemColors.ControlLightLight;
@@ -89,7 +89,7 @@
             // ADDBUTTON
             // 
             ADDBUTTON.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ADDBUTTON.BackColor = SystemColors.MenuHighlight;
+            ADDBUTTON.BackColor = SystemColors.Highlight;
             ADDBUTTON.FlatStyle = FlatStyle.Flat;
             ADDBUTTON.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             ADDBUTTON.ForeColor = SystemColors.ControlLightLight;
@@ -164,20 +164,20 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(229, 226, 224);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(229, 226, 224);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(109, 122, 224);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(109, 122, 224);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.Location = new Point(312, 61);
             dataGridView1.Margin = new Padding(2, 3, 2, 3);
@@ -268,6 +268,7 @@
             Controls.Add(UPDATEST);
             Controls.Add(DELETEST);
             Margin = new Padding(2, 3, 2, 3);
+            Name = "FormStudents";
             Text = "Students";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

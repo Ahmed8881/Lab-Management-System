@@ -74,7 +74,7 @@
             // ADDCLO
             // 
             ADDCLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ADDCLO.BackColor = Color.FromArgb(0, 169, 255);
+            ADDCLO.BackColor = SystemColors.Highlight;
             ADDCLO.ForeColor = SystemColors.ControlLightLight;
             ADDCLO.Location = new Point(357, 467);
             ADDCLO.Margin = new Padding(2, 3, 2, 3);
@@ -88,7 +88,7 @@
             // UPDATECLO
             // 
             UPDATECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            UPDATECLO.BackColor = SystemColors.MenuHighlight;
+            UPDATECLO.BackColor = SystemColors.Highlight;
             UPDATECLO.ForeColor = SystemColors.ControlLightLight;
             UPDATECLO.Location = new Point(470, 467);
             UPDATECLO.Margin = new Padding(2, 3, 2, 3);
@@ -102,7 +102,7 @@
             // DELETECLO
             // 
             DELETECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            DELETECLO.BackColor = SystemColors.MenuHighlight;
+            DELETECLO.BackColor = SystemColors.Highlight;
             DELETECLO.ForeColor = SystemColors.ControlLightLight;
             DELETECLO.Location = new Point(589, 467);
             DELETECLO.Margin = new Padding(2, 3, 2, 3);
