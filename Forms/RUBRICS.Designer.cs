@@ -67,7 +67,7 @@
             ADD.ForeColor = SystemColors.ControlLightLight;
             ADD.Image = Properties.Resources.icons8_add_50;
             ADD.ImageAlign = ContentAlignment.MiddleLeft;
-            ADD.Location = new Point(451, 524);
+            ADD.Location = new Point(442, 524);
             ADD.Margin = new Padding(2, 3, 2, 3);
             ADD.Name = "ADD";
             ADD.Size = new Size(149, 64);
