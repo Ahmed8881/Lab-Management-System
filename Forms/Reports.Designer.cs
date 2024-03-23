@@ -59,9 +59,11 @@
             button1.BackColor = SystemColors.Highlight;
             button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Image = Properties.Resources.icons8_pdf_50;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(464, 30);
             button1.Name = "button1";
-            button1.Size = new Size(298, 52);
+            button1.Size = new Size(298, 66);
             button1.TabIndex = 2;
             button1.Text = "Export As PDF";
             button1.UseVisualStyleBackColor = false;
