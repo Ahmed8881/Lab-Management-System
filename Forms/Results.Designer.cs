@@ -63,7 +63,6 @@
             label1.Size = new Size(60, 20);
             label1.TabIndex = 1;
             label1.Text = "Student";
-            label1.Click += label1_Click;
             // 
             // dateTimePicker1
             // 
@@ -98,7 +97,7 @@
             label3.Size = new Size(89, 20);
             label3.TabIndex = 5;
             label3.Text = "Rubric Level";
-            label3.Click += label3_Click;
+            
             // 
             // label4
             // 
