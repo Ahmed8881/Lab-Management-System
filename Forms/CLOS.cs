@@ -23,8 +23,21 @@ namespace sample.Forms
             DataTable dt = CloDL.GetCloData();
             dataGridView1.DataSource = dt;
         }
+        private bool AreAllFieldEmpty()
+        {
+            if (textBox1.Text == "")
+            {
+                return true;
+            }
+            return false;
+        }
         private void AddClo_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
             string Name = textBox1.Text;
             DateTime DateCreated = DatePicker.Value;
             if (CloDL.AddClo(Name, DateCreated))
@@ -40,6 +53,16 @@ namespace sample.Forms
         }
         private void UpdateClo_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             string Name = textBox1.Text;
             DateTime DateUpdated = DatePicker.Value;
             int Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
@@ -56,6 +79,11 @@ namespace sample.Forms
         }
         private void DeleteClo_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             int Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
             if (CloDL.DeleteClo(Id))
             {
