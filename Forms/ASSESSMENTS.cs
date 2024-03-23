@@ -22,8 +22,21 @@ namespace sample.Forms
             DataTable dt = AssessmentDL.GetAssessmentData();
             dataGridView1.DataSource = dt;
         }
+        private bool AreAllFieldEmpty()
+        {
+            if (TitleBox.Text == "" && MarksBox.Text == "" && WeightBox.Text == "")
+            {
+                return true;
+            }
+            return false;
+        }
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
             string Title = TitleBox.Text;
             int Marks = Convert.ToInt32(MarksBox.Text);
             int Weight = Convert.ToInt32(WeightBox.Text);
@@ -43,6 +56,11 @@ namespace sample.Forms
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             int Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             bool success = AssessmentDL.DeleteAssessment(Id);
             if (success)
@@ -57,6 +75,16 @@ namespace sample.Forms
         }
         private void UpdateButton_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row to Update Data");
+                return;
+            }
             int Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             string Title = TitleBox.Text;
             int Marks = Convert.ToInt32(MarksBox.Text);

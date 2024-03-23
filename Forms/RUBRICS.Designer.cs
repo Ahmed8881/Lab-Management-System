@@ -51,7 +51,6 @@
             CLOID.Size = new Size(117, 21);
             CLOID.TabIndex = 0;
             CLOID.Text = "Rubrics Details";
-            CLOID.Click += label1_Click;
             // 
             // textBox1
             // 

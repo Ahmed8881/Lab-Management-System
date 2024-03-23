@@ -23,19 +23,22 @@ namespace sample.Forms
             DataTable dt = StudentDL.GetStudentData();
             dataGridView1.DataSource = dt;
         }
-
-        private void label7_Click(object sender, EventArgs e)
+        private bool AreAllFieldEmpty()
         {
-
-        }
-
-        private void FormStudents_Load(object sender, EventArgs e)
-        {
-
+            if (RegNum.Text == "" && FirstName.Text == "" && LastNames.Text == "" && emails.Text == "" && Contactno.Text == "")
+            {
+                return true;
+            }
+            return false;
         }
 
         private void ADDBUTTON_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
             string Reg = RegNum.Text;
             string First = FirstName.Text;
             string Last = LastNames.Text;
@@ -62,6 +65,16 @@ namespace sample.Forms
 
         private void UPDATEST_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             string reg = RegNum.Text;
             string first = FirstName.Text;
             string last = LastNames.Text;
@@ -86,6 +99,11 @@ namespace sample.Forms
 
         private void DELETEST_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             // Retrieve the registration number of the student to be deleted
             string regNo = RegNum.Text;
 
@@ -110,11 +128,6 @@ namespace sample.Forms
                 MessageBox.Show("Failed to Delete Student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LoadData();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {

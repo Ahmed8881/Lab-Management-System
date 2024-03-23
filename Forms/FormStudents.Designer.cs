@@ -186,7 +186,6 @@
             dataGridView1.Size = new Size(769, 291);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellClick += dataGridView1_CellClick;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Email
             // 
@@ -236,7 +235,6 @@
             label7.Size = new Size(66, 23);
             label7.TabIndex = 15;
             label7.Text = "ACTIVE";
-            label7.Click += label7_Click;
             // 
             // StatusCheckBox
             // 
@@ -271,7 +269,6 @@
             Controls.Add(DELETEST);
             Margin = new Padding(2, 3, 2, 3);
             Text = "Students";
-            Load += FormStudents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

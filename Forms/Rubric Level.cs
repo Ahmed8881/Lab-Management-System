@@ -32,8 +32,21 @@ namespace sample.Forms
             dataGridView1.DataSource = RubricLevelDL.GetRubricLevelData();
             IdComboBox.DataSource = RubricLevelDL.GetRubricId();
         }
+        private bool AreAllFieldEmpty()
+        {
+            if (DetailsBox.Text == "" && LevelComboBox.SelectedIndex == 0 && IdComboBox.SelectedIndex == 0)
+            {
+                return true;
+            }
+            return false;
+        }
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
             int id = int.Parse(IdComboBox.SelectedItem.ToString());
             string details = DetailsBox.Text;
             int level = int.Parse(LevelComboBox.SelectedItem.ToString());
@@ -52,6 +65,16 @@ namespace sample.Forms
         }
         private void UpdateButton_Click(object sender, EventArgs e)
         {
+            if (AreAllFieldEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             int rubricsId = int.Parse(IdComboBox.SelectedItem.ToString());
             string details = DetailsBox.Text;
             int level = int.Parse(LevelComboBox.SelectedItem.ToString());
@@ -71,6 +94,11 @@ namespace sample.Forms
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please Select a Row First");
+                return;
+            }
             int levelId = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
             if (RubricLevelDL.DeleteRubricLevel(levelId))
             {

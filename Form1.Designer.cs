@@ -68,8 +68,14 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(196, 835);
             panelMenu.TabIndex = 0;
+<<<<<<< HEAD
            
            
+=======
+            // 
+            // A
+            // 
+>>>>>>> 0475f0fe4684f76ba762d918032425a6607f26b1
             A.BackColor = Color.FromArgb(51, 51, 76);
             A.Dock = DockStyle.Top;
             A.FlatAppearance.BorderSize = 0;
