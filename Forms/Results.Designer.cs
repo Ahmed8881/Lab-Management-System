@@ -75,6 +75,8 @@
             // button1
             // 
             button1.BackColor = SystemColors.Highlight;
+            button1.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            button1.ForeColor = SystemColors.ControlLightLight;
             button1.Location = new Point(789, 146);
             button1.Name = "button1";
             button1.Size = new Size(95, 41);

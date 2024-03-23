@@ -58,7 +58,9 @@
             // UpdateButton
             // 
             UpdateButton.BackColor = SystemColors.Highlight;
-            UpdateButton.Location = new Point(542, 536);
+            UpdateButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            UpdateButton.ForeColor = SystemColors.ControlLightLight;
+            UpdateButton.Location = new Point(552, 536);
             UpdateButton.Margin = new Padding(2, 3, 2, 3);
             UpdateButton.Name = "UpdateButton";
             UpdateButton.Size = new Size(80, 40);
@@ -70,7 +72,9 @@
             // DeleteButton
             // 
             DeleteButton.BackColor = SystemColors.Highlight;
-            DeleteButton.Location = new Point(678, 536);
+            DeleteButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            DeleteButton.ForeColor = SystemColors.ControlLightLight;
+            DeleteButton.Location = new Point(688, 536);
             DeleteButton.Margin = new Padding(2, 3, 2, 3);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(80, 40);
@@ -82,7 +86,9 @@
             // AddButton
             // 
             AddButton.BackColor = SystemColors.Highlight;
-            AddButton.Location = new Point(409, 536);
+            AddButton.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            AddButton.ForeColor = SystemColors.ControlLightLight;
+            AddButton.Location = new Point(419, 536);
             AddButton.Margin = new Padding(2, 3, 2, 3);
             AddButton.Name = "AddButton";
             AddButton.Size = new Size(80, 40);

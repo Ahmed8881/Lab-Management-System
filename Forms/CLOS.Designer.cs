@@ -75,8 +75,9 @@
             // 
             ADDCLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ADDCLO.BackColor = SystemColors.Highlight;
+            ADDCLO.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             ADDCLO.ForeColor = SystemColors.ControlLightLight;
-            ADDCLO.Location = new Point(357, 467);
+            ADDCLO.Location = new Point(312, 463);
             ADDCLO.Margin = new Padding(2, 3, 2, 3);
             ADDCLO.Name = "ADDCLO";
             ADDCLO.Size = new Size(93, 45);
@@ -89,8 +90,9 @@
             // 
             UPDATECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             UPDATECLO.BackColor = SystemColors.Highlight;
+            UPDATECLO.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             UPDATECLO.ForeColor = SystemColors.ControlLightLight;
-            UPDATECLO.Location = new Point(470, 467);
+            UPDATECLO.Location = new Point(446, 463);
             UPDATECLO.Margin = new Padding(2, 3, 2, 3);
             UPDATECLO.Name = "UPDATECLO";
             UPDATECLO.Size = new Size(95, 45);
@@ -103,8 +105,9 @@
             // 
             DELETECLO.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DELETECLO.BackColor = SystemColors.Highlight;
+            DELETECLO.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             DELETECLO.ForeColor = SystemColors.ControlLightLight;
-            DELETECLO.Location = new Point(589, 467);
+            DELETECLO.Location = new Point(591, 463);
             DELETECLO.Margin = new Padding(2, 3, 2, 3);
             DELETECLO.Name = "DELETECLO";
             DELETECLO.Size = new Size(88, 45);
