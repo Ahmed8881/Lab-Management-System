@@ -15,14 +15,19 @@ namespace sample.Forms
         public Attendence()
         {
             InitializeComponent();
+            LoadComboBoxes();
             LoadData();
         }
-        private void LoadData()
+        private void LoadComboBoxes()
         {
             RegistrationBox.Items.Clear();
             StatusBox.Items.Clear();
             RegistrationBox.DataSource = AttendanceDL.GetRegNo();
             StatusBox.DataSource = AttendanceDL.GetStatuses();
+        }
+        private void LoadData()
+        {
+            dataGridView1.DataSource = AttendanceDL.GetAttendance();
         }
         private bool AreAllFieldsEmpty()
         {
@@ -39,6 +44,7 @@ namespace sample.Forms
             if (AttendanceDL.SaveAttendance(attendance))
             {
                 MessageBox.Show("Attendance Saved Successfully");
+                LoadData();
             }
             else
             {
