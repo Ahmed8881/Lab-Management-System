@@ -95,13 +95,14 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.Highlight;
             button1.Location = new Point(254, 257);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(102, 55);
             button1.TabIndex = 6;
             button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // Attendence
             // 

@@ -47,118 +47,125 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(295, 28);
-            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Location = new Point(337, 37);
+            dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(536, 341);
+            dataGridView1.Size = new Size(613, 455);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // UpdateButton
             // 
-            UpdateButton.Location = new Point(474, 402);
-            UpdateButton.Margin = new Padding(2);
+            UpdateButton.BackColor = SystemColors.Highlight;
+            UpdateButton.Location = new Point(542, 536);
+            UpdateButton.Margin = new Padding(2, 3, 2, 3);
             UpdateButton.Name = "UpdateButton";
-            UpdateButton.Size = new Size(70, 30);
+            UpdateButton.Size = new Size(80, 40);
             UpdateButton.TabIndex = 3;
             UpdateButton.Text = "UPDATE";
-            UpdateButton.UseVisualStyleBackColor = true;
+            UpdateButton.UseVisualStyleBackColor = false;
             UpdateButton.Click += UpdateButton_Click;
             // 
             // DeleteButton
             // 
-            DeleteButton.Location = new Point(593, 402);
-            DeleteButton.Margin = new Padding(2);
+            DeleteButton.BackColor = SystemColors.Highlight;
+            DeleteButton.Location = new Point(678, 536);
+            DeleteButton.Margin = new Padding(2, 3, 2, 3);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(70, 30);
+            DeleteButton.Size = new Size(80, 40);
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "DELETE";
-            DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.UseVisualStyleBackColor = false;
             DeleteButton.Click += DeleteButton_Click;
             // 
             // AddButton
             // 
-            AddButton.Location = new Point(358, 402);
-            AddButton.Margin = new Padding(2);
+            AddButton.BackColor = SystemColors.Highlight;
+            AddButton.Location = new Point(409, 536);
+            AddButton.Margin = new Padding(2, 3, 2, 3);
             AddButton.Name = "AddButton";
-            AddButton.Size = new Size(70, 30);
+            AddButton.Size = new Size(80, 40);
             AddButton.TabIndex = 5;
             AddButton.Text = "ADD";
-            AddButton.UseVisualStyleBackColor = true;
+            AddButton.UseVisualStyleBackColor = false;
             AddButton.Click += AddButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 44);
+            label1.Location = new Point(32, 59);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 7;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 158);
+            label2.Location = new Point(32, 211);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 8;
             label2.Text = "RubricId";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 121);
+            label3.Location = new Point(32, 161);
             label3.Name = "label3";
-            label3.Size = new Size(82, 15);
+            label3.Size = new Size(102, 20);
             label3.TabIndex = 9;
             label3.Text = " AssessmentId";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(28, 82);
+            label4.Location = new Point(32, 109);
             label4.Name = "label4";
-            label4.Size = new Size(64, 15);
+            label4.Size = new Size(81, 20);
             label4.TabIndex = 10;
             label4.Text = "TotalMarks";
             // 
             // AssessmentIdBox
             // 
             AssessmentIdBox.FormattingEnabled = true;
-            AssessmentIdBox.Location = new Point(130, 118);
+            AssessmentIdBox.Location = new Point(149, 157);
+            AssessmentIdBox.Margin = new Padding(3, 4, 3, 4);
             AssessmentIdBox.Name = "AssessmentIdBox";
-            AssessmentIdBox.Size = new Size(121, 23);
+            AssessmentIdBox.Size = new Size(138, 28);
             AssessmentIdBox.TabIndex = 12;
             // 
             // RubricIdBox
             // 
             RubricIdBox.FormattingEnabled = true;
-            RubricIdBox.Location = new Point(130, 155);
+            RubricIdBox.Location = new Point(149, 207);
+            RubricIdBox.Margin = new Padding(3, 4, 3, 4);
             RubricIdBox.Name = "RubricIdBox";
-            RubricIdBox.Size = new Size(121, 23);
+            RubricIdBox.Size = new Size(138, 28);
             RubricIdBox.TabIndex = 13;
             // 
             // NameBox
             // 
-            NameBox.Location = new Point(130, 36);
+            NameBox.Location = new Point(149, 48);
+            NameBox.Margin = new Padding(3, 4, 3, 4);
             NameBox.Name = "NameBox";
-            NameBox.Size = new Size(121, 23);
+            NameBox.Size = new Size(138, 27);
             NameBox.TabIndex = 14;
             // 
             // MarksBox
             // 
-            MarksBox.Location = new Point(130, 79);
+            MarksBox.Location = new Point(149, 105);
+            MarksBox.Margin = new Padding(3, 4, 3, 4);
             MarksBox.Name = "MarksBox";
-            MarksBox.Size = new Size(121, 23);
+            MarksBox.Size = new Size(138, 27);
             MarksBox.TabIndex = 15;
             // 
             // Assessment_Component
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(864, 566);
+            ClientSize = new Size(987, 755);
             Controls.Add(MarksBox);
             Controls.Add(NameBox);
             Controls.Add(RubricIdBox);
@@ -171,7 +178,7 @@
             Controls.Add(DeleteButton);
             Controls.Add(UpdateButton);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "Assessment_Component";
             Text = "Assessment_Component";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
