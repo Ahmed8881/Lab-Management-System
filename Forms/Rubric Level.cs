@@ -116,5 +116,10 @@ namespace sample.Forms
             IdComboBox.SelectedItem = int.Parse(dataGridView1.CurrentRow.Cells["RubricId"].Value.ToString());
             LevelComboBox.SelectedItem = int.Parse(dataGridView1.CurrentRow.Cells["MeasurementLevel"].Value.ToString());
         }
+
+        private void Rubric_Level_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
