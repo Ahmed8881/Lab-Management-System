@@ -162,35 +162,10 @@ namespace sample
             OpenChildForm(new Forms.RUBRICS(), sender);
         }
 
-        private void A_Click(object sender, EventArgs e)
-        {
+      
 
-        }
 
-        private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void A_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.ASSESSMENTS(), sender);
-        }
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 
 }

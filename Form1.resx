@@ -118,6 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Reports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAA8dJREFUaEPtmT1oFEEYhhM1WERFU8Q6AQuNCGJhoSlEE0VBQaKVWgTsQjRaWIiC
+        CLGIIoI2Cjb+dVai9v7/gEL8CVFQEQQVhaiFf3g+78y3MTHJ3eTmjtkiD7zc7uz3ffvu3c7s7FzNFFNM
+        kYZCodCEtqPD6BQ6gfajFajWwvILJtvQHVSMm6jBUvIH5o6gP3IawBt0Gi2x9HyAoS65K4OfqNPKpAUj
+        89CQXJXJL9Ri5dKBiW3OThxnrFw6MHHBe4liwMqlAxP3vJcofqOZVjINGBh0VuKZbSXTgIGX3kc09VYy
+        DRi47X1EMWTl0oGJy95LFI+sXDowcch7ieKklUsHJjZ4L1FssXLpwMRS7yWKZVYuHZi47r1Ecc3KpQMT
+        T7yXKPqtXDowcdF7ieKclUsHJlaj0PeQ8VDuKiuXFoysdZbKo93K5AMMlTNVeWHp+QFTfd7bpDhq6fkB
+        U83oh7MXht4MF1h6vsCYln9C6bO0/IG5WvTU2SyOVlGmW1o+wWDIG+OghecXTN73XovyysKHoa0OdaDz
+        6Dn6hr7attp0rM7Cqw8nC5myvLVwB/ubUMgrs2I2WVr14CQz0AedsQSXLH4a0gplhr6E3agF1Zu03YOy
+        vqeZQC+a5k5aDSh+QGcqwWs01+Kzi9CwrdXKCQcAHUPdSKuTotcOVQ6KarXxLAqZc+2wHN1OitdFrHGF
+        AiBWC+W6GOVutOY4KDQfHUTvUQj6NXT7qWNnfaLLygVDzi6f6mqUPwCQvBJpJPmOJsNxy9cIJNQnJv08
+        IUdfxjMVgA5rDoMEPew2o0fKLpN1VktfgtjtigdArP480rlv2P4eJMLfZQhejh67tDiard6A3y0scico
+        AXGt6KPLKBTuWttivxu4bkzgTqQJXiVwq4l8fvG7/5ZJ2dY/WQ9QozU52O9E2WT0Cppj7bNdC7VcYDEI
+        2opCRqJQMhPjXchD3+T6TSPScHtMDcZRNNyf2A67EAIa0GcXWjkWWu3s1hr+g4dtme93rf5irvpN92uM
+        +VeLtrBbi4B9Pq6irLfaWWfvcScz2B95MUKzhFY7PAra97qIUp2dgFs+rqK4pVE+s+FX045Rwy/7uhj1
+        Fc2im6x5FLRr+NVkUhQffgn45OMqyjuk+dXIB2K3nTIYcjT3EnEPxEqAgWyKoulGmzWXhNh2y6ncFCUW
+        jGgWK2RM044ZdmgMOob0S1Rv0lgumNFtpovJhnj1GT2xNSLNMmlbHTubkii2utP4csHURpT1mWIoJh+3
+        00Rg8P9XXb3mSvolzqEJXnVrav4CfzdEvCiwL3UAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="A.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

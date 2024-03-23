@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelMenu = new Panel();
+            Reports = new Button();
             A = new Button();
             button6 = new Button();
             Attendence = new Button();
@@ -49,12 +50,12 @@
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-
             SuspendLayout();
             // 
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(51, 51, 76);
+            panelMenu.Controls.Add(Reports);
             panelMenu.Controls.Add(A);
             panelMenu.Controls.Add(button6);
             panelMenu.Controls.Add(Attendence);
@@ -69,7 +70,30 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(196, 835);
             panelMenu.TabIndex = 0;
-  
+            // 
+            // Reports
+            // 
+            Reports.BackColor = Color.FromArgb(51, 51, 76);
+            Reports.Dock = DockStyle.Top;
+            Reports.FlatAppearance.BorderSize = 0;
+            Reports.FlatStyle = FlatStyle.Flat;
+            Reports.ForeColor = Color.Gainsboro;
+            Reports.Image = (Image)resources.GetObject("Reports.Image");
+            Reports.ImageAlign = ContentAlignment.MiddleLeft;
+            Reports.Location = new Point(0, 543);
+            Reports.Margin = new Padding(2);
+            Reports.Name = "Reports";
+            Reports.Padding = new Padding(10, 0, 0, 0);
+            Reports.Size = new Size(196, 65);
+            Reports.TabIndex = 10;
+            Reports.Text = "Reports";
+            Reports.TextAlign = ContentAlignment.MiddleLeft;
+            Reports.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Reports.UseVisualStyleBackColor = false;
+          
+            // 
+            // A
+            // 
             A.BackColor = Color.FromArgb(51, 51, 76);
             A.Dock = DockStyle.Top;
             A.FlatAppearance.BorderSize = 0;
@@ -87,7 +111,7 @@
             A.TextAlign = ContentAlignment.MiddleLeft;
             A.TextImageRelation = TextImageRelation.ImageBeforeText;
             A.UseVisualStyleBackColor = false;
-            A.Click += A_Click_1;
+           
             // 
             // button6
             // 
@@ -222,7 +246,7 @@
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(196, 64);
             panelLogo.TabIndex = 1;
-            panelLogo.Paint += panelLogo_Paint;
+           
             // 
             // panelTitleBar
             // 
@@ -260,7 +284,7 @@
             panelDesktopPanel.Name = "panelDesktopPanel";
             panelDesktopPanel.Size = new Size(853, 740);
             panelDesktopPanel.TabIndex = 2;
-            panelDesktopPanel.Paint += panelDesktopPanel_Paint;
+        
             // 
             // label1
             // 
@@ -286,7 +310,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+           
             // 
             // label3
             // 
@@ -311,7 +335,7 @@
             label2.Size = new Size(279, 37);
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
-            label2.Click += label2_Click;
+        
             // 
             // Form1
             // 
@@ -351,5 +375,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button A;
+        private Button Reports;
     }
 }
