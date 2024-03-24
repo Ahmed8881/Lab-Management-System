@@ -63,7 +63,7 @@ class ResultDL
     }
     public static bool SaveResult(ResultBL result)
     {
-        string query = "Insert into Result(StudentID, AssessmentComponentID, RubricMeasurementId, EvaluationDate) values(@StudentID, @AssessmentComponentID, @RubricLevelID, @EvaluationDate)";
+        string query = "Insert into StudentResult(StudentID, AssessmentComponentID, RubricMeasurementId, EvaluationDate) values(@StudentID, @AssessmentComponentID, @RubricLevelID, @EvaluationDate)";
         SqlCommand cmd = new SqlCommand(query, dBConfig.GetConnection());
         cmd.Parameters.AddWithValue("@StudentID", result.GetStudentID());
         cmd.Parameters.AddWithValue("@AssessmentComponentID", result.GetAssessmentComponentId());

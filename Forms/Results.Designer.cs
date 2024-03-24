@@ -94,6 +94,7 @@
             EvaluateButton.TabIndex = 3;
             EvaluateButton.Text = "Evalute";
             EvaluateButton.UseVisualStyleBackColor = false;
+            EvaluateButton.Click += EvaluateButton_Click;
             // 
             // label2
             // 

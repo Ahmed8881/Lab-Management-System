@@ -15,9 +15,10 @@ namespace sample.Forms
         public Results()
         {
             InitializeComponent();
+            LoadComboBox();
             LoadData();
         }
-        private void LoadData()
+        private void LoadComboBox()
         {
             List<string> AssessmentTitles = ResultDL.GetAssessmentTitle();
             List<string> StudentRegNos = ResultDL.GetStudentRegNos();
@@ -30,6 +31,15 @@ namespace sample.Forms
             foreach (string regNo in StudentRegNos)
             {
                 StudentBox.Items.Add(regNo);
+            }
+        }
+        private void LoadData()
+        {
+            List<ResultBL> results = ResultDL.GetResults();
+            dataGridView1.Rows.Clear();
+            foreach (ResultBL result in results)
+            {
+                dataGridView1.Rows.Add(result.GetStudentRegNo(), result.GetAssessmentTitle(), result.GetComponentName(), result.GetRubricDetail(), result.GetRubricLevel(), result.GetMarks(), result.GetEvaluationDate());
             }
         }
         // When An Assessment is Selected from the ComboBox Load its Components in the Component ComboBox
@@ -90,6 +100,7 @@ namespace sample.Forms
             if (ResultDL.SaveResult(result))
             {
                 MessageBox.Show("Result Saved Successfully");
+                LoadData();
             }
             else
             {
