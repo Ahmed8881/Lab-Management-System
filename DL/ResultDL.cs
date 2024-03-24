@@ -79,6 +79,8 @@ class ResultDL
         foreach (DataRow dr in dt.Rows)
         {
             ResultBL result = new(dr["RegistrationNumber"].ToString(), dr["Assessment"].ToString(), dr["Component"].ToString(), dr["Rubric"].ToString(), Convert.ToInt32(dr["Level"]), Convert.ToDateTime(dr["EvaluationDate"]));
+            result.CalculateMarks();
+            results.Add(result);
         }
         return results;
     }
