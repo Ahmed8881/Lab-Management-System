@@ -43,6 +43,13 @@
             RubricDetailBox = new ComboBox();
             label7 = new Label();
             dataGridView1 = new DataGridView();
+            RegistrationNumber = new DataGridViewTextBoxColumn();
+            Assessment = new DataGridViewTextBoxColumn();
+            Component = new DataGridViewTextBoxColumn();
+            Rubric = new DataGridViewTextBoxColumn();
+            Level = new DataGridViewTextBoxColumn();
+            Marks = new DataGridViewTextBoxColumn();
+            EvaluationDate = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -181,12 +188,54 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { RegistrationNumber, Assessment, Component, Rubric, Level, Marks, EvaluationDate });
             dataGridView1.Location = new Point(39, 184);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(884, 244);
             dataGridView1.TabIndex = 15;
+            // 
+            // RegistrationNumber
+            // 
+            RegistrationNumber.HeaderText = "RegistrationNumber";
+            RegistrationNumber.Name = "RegistrationNumber";
+            RegistrationNumber.ReadOnly = true;
+            // 
+            // Assessment
+            // 
+            Assessment.HeaderText = "Assessment";
+            Assessment.Name = "Assessment";
+            Assessment.ReadOnly = true;
+            // 
+            // Component
+            // 
+            Component.HeaderText = "Component";
+            Component.Name = "Component";
+            // 
+            // Rubric
+            // 
+            Rubric.HeaderText = "Rubric";
+            Rubric.Name = "Rubric";
+            Rubric.ReadOnly = true;
+            // 
+            // Level
+            // 
+            Level.HeaderText = "Level";
+            Level.Name = "Level";
+            Level.ReadOnly = true;
+            // 
+            // Marks
+            // 
+            Marks.HeaderText = "Marks";
+            Marks.Name = "Marks";
+            Marks.ReadOnly = true;
+            // 
+            // EvaluationDate
+            // 
+            EvaluationDate.HeaderText = "EvaluationDate";
+            EvaluationDate.Name = "EvaluationDate";
+            EvaluationDate.ReadOnly = true;
             // 
             // Results
             // 
@@ -231,5 +280,12 @@
         private ComboBox RubricDetailBox;
         private Label label7;
         private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn RegistrationNumber;
+        private DataGridViewTextBoxColumn Assessment;
+        private DataGridViewTextBoxColumn Component;
+        private DataGridViewTextBoxColumn Rubric;
+        private DataGridViewTextBoxColumn Level;
+        private DataGridViewTextBoxColumn Marks;
+        private DataGridViewTextBoxColumn EvaluationDate;
     }
 }
