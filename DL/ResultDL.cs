@@ -1,5 +1,6 @@
 using MID.DL;
 using System.Data;
+using System.Data.SqlClient;
 
 class ResultDL
 {
@@ -60,4 +61,15 @@ class ResultDL
         }
         return levels;
     }
+    public static bool SaveResult(ResultBL result)
+    {
+        string query = "Insert into Result(StudentID, AssessmentComponentID, RubricMeasurementId, EvaluationDate) values(@StudentID, @AssessmentComponentID, @RubricLevelID, @EvaluationDate)";
+        SqlCommand cmd = new SqlCommand(query, dBConfig.GetConnection());
+        cmd.Parameters.AddWithValue("@StudentID", result.GetStudentID());
+        cmd.Parameters.AddWithValue("@AssessmentComponentID", result.GetAssessmentComponentId());
+        cmd.Parameters.AddWithValue("@RubricLevelID", result.GetRubricLevelId());
+        cmd.Parameters.AddWithValue("@EvaluationDate", result.GetEvaluationDate());
+        return dBConfig.ExecuteCommand(cmd);
+    }
+
 }

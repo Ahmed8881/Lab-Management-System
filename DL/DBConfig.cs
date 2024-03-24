@@ -41,10 +41,17 @@ namespace MID.DL
         }
         public bool ExecuteCommand(string query)
         {
-            if (Connection.State == ConnectionState.Closed)
-                Connection.Open();
+            Connection.Open();
             Command = new SqlCommand(query, Connection);
             int RowsAffected = Command.ExecuteNonQuery();
+            Connection.Close();
+            return RowsAffected > 0;
+        }
+        public bool ExecuteCommand(SqlCommand cmd)
+        {
+            Connection.Open();
+            cmd.Connection = Connection;
+            int RowsAffected = cmd.ExecuteNonQuery();
             Connection.Close();
             return RowsAffected > 0;
         }
