@@ -111,7 +111,11 @@
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
 
+
             button1.Click += button1_Click;
+
+            button1.Click += SaveButton_Click;
+
 
             button1.Click += SaveButton_Click;
 
