@@ -71,5 +71,16 @@ class ResultDL
         cmd.Parameters.AddWithValue("@EvaluationDate", result.GetEvaluationDate());
         return dBConfig.ExecuteCommand(cmd);
     }
+    public static List<ResultBL> GetResults()
+    {
+        string query = "Select s.RegistrationNumber, a.Title As Assessment, ac.Name As Component, r.Details As Rubric, rl.MeasurementLevel As Level, re.EvaluationDate from StudentResult re join Student s on re.StudentID = s.Id join AssessmentComponent ac on re.AssessmentComponentID = ac.Id join Assessment a on ac.AssessmentId = a.Id join Rubric r on re.RubricMeasurementId = r.Id join RubricLevel rl on r.Id = rl.RubricId";
+        List<ResultBL> results = new();
+        DataTable dt = dBConfig.GetData(query);
+        foreach (DataRow dr in dt.Rows)
+        {
+            ResultBL result = new(dr["RegistrationNumber"].ToString(), dr["Assessment"].ToString(), dr["Component"].ToString(), dr["Rubric"].ToString(), Convert.ToInt32(dr["Level"]), Convert.ToDateTime(dr["EvaluationDate"]));
+        }
+        return results;
+    }
 
 }
