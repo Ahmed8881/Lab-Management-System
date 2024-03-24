@@ -136,6 +136,7 @@
             ComponentBox.Name = "ComponentBox";
             ComponentBox.Size = new Size(98, 23);
             ComponentBox.TabIndex = 9;
+            ComponentBox.SelectedIndexChanged += ComponentBox_SelectedIndexChanged;
             // 
             // RubricLevelBox
             // 
@@ -154,6 +155,7 @@
             AssessmentBox.Name = "AssessmentBox";
             AssessmentBox.Size = new Size(98, 23);
             AssessmentBox.TabIndex = 11;
+            AssessmentBox.SelectedIndexChanged += AssessmentBox_SelectedIndexChanged;
             // 
             // RubricDetailBox
             // 
@@ -163,6 +165,7 @@
             RubricDetailBox.Name = "RubricDetailBox";
             RubricDetailBox.Size = new Size(98, 23);
             RubricDetailBox.TabIndex = 12;
+            RubricDetailBox.SelectedIndexChanged += RubricDetailBox_SelectedIndexChanged;
             // 
             // label7
             // 
