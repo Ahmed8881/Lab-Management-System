@@ -65,5 +65,36 @@ namespace sample.Forms
                 RubricLevelBox.Items.Add(level);
             }
         }
+        private bool AreFieldsEmpty()
+        {
+            if (StudentBox.SelectedItem == null || AssessmentBox.SelectedItem == null || ComponentBox.SelectedItem == null || RubricDetailBox.SelectedItem == null || RubricLevelBox.SelectedItem == null)
+            {
+                return true;
+            }
+            return false;
+        }
+        private void EvaluateButton_Click(object sender, EventArgs e)
+        {
+            if (AreFieldsEmpty())
+            {
+                MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            string studentRegNo = StudentBox.SelectedItem.ToString();
+            string assessmentTitle = AssessmentBox.SelectedItem.ToString();
+            string componentName = ComponentBox.SelectedItem.ToString();
+            string rubricDetail = RubricDetailBox.SelectedItem.ToString();
+            int rubricLevel = Convert.ToInt32(RubricLevelBox.SelectedItem);
+            DateTime evaluationDate = DatePicker.Value;
+            ResultBL result = new ResultBL(studentRegNo, assessmentTitle, componentName, rubricDetail, rubricLevel, evaluationDate);
+            if (ResultDL.SaveResult(result))
+            {
+                MessageBox.Show("Result Saved Successfully");
+            }
+            else
+            {
+                MessageBox.Show("An Error Occurred");
+            }
+        }
     }
 }
