@@ -86,6 +86,7 @@
             StatusBox.Name = "StatusBox";
             StatusBox.Size = new Size(138, 28);
             StatusBox.TabIndex = 4;
+            StatusBox.SelectedIndexChanged += StatusBox_SelectedIndexChanged;
             // 
             // DatePicker
             // 
@@ -110,15 +111,7 @@
             button1.TabIndex = 6;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
-
-
-            button1.Click += button1_Click;
-
             button1.Click += SaveButton_Click;
-
-
-            button1.Click += SaveButton_Click;
-
             // 
             // dataGridView1
             // 

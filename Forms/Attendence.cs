@@ -56,5 +56,10 @@ namespace sample.Forms
         {
 
         }
+
+        private void StatusBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
