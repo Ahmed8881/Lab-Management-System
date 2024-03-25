@@ -129,6 +129,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(568, 456);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // IdComboBox
             // 
@@ -147,6 +148,7 @@
             LevelComboBox.Name = "LevelComboBox";
             LevelComboBox.Size = new Size(138, 28);
             LevelComboBox.TabIndex = 13;
+            LevelComboBox.SelectedIndexChanged += LevelComboBox_SelectedIndexChanged;
             // 
             // label3
             // 

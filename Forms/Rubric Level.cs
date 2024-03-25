@@ -121,5 +121,15 @@ namespace sample.Forms
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
