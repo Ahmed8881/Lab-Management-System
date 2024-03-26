@@ -38,6 +38,11 @@ namespace sample.Forms
                 MessageBox.Show("Please Fill All Fields");
                 return;
             }
+            if (CloDL.isCloExist(textBox1.Text))
+            {
+                MessageBox.Show("CLO Already Exist");
+                return;
+            }
             string Name = textBox1.Text;
             DateTime DateCreated = DatePicker.Value;
             if (CloDL.AddClo(Name, DateCreated))
@@ -53,6 +58,11 @@ namespace sample.Forms
         }
         private void UpdateClo_Click(object sender, EventArgs e)
         {
+            if (CloDL.isCloExist(textBox1.Text))
+            {
+                MessageBox.Show("CLO Already Exist");
+                return;
+            }
             if (AreAllFieldEmpty())
             {
                 MessageBox.Show("Please Fill All Fields");

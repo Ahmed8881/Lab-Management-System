@@ -41,5 +41,11 @@ namespace MID.DL
             DBConfig.CloseConnection();
             return result;
         }
+        public static bool isCloExist(string Name)
+        {
+            string query = "SELECT * FROM Clo WHERE Name = @Name";
+            DataTable dt = DBConfig.GetData(query);
+            return dt.Rows.Count > 0;
+        }
     }
 }
