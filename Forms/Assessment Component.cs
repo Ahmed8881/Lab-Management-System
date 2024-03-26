@@ -16,14 +16,19 @@ namespace sample.Forms
         {
             InitializeComponent();
             LoadData();
+            LoadComboBoxes();
         }
         private void LoadData()
         {
             dataGridView1.DataSource = AssessmentComponentDL.GetData();
+        }
+        private void LoadComboBoxes()
+        {
             RubricIdBox.Items.Clear();
             AssessmentIdBox.Items.Clear();
             RubricIdBox.DataSource = AssessmentComponentDL.GetRubricIds();
             AssessmentIdBox.DataSource = AssessmentComponentDL.GetAssessmentIds();
+
         }
         private bool AreAllFieldEmpty()
         {

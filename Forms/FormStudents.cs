@@ -31,6 +31,16 @@ namespace sample.Forms
             }
             return false;
         }
+        private bool isValidEmail(string email)
+        {
+            string emailPattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            return System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern);
+        }
+        private bool isValidPhone(string phone)
+        {
+            string phonePattern = @"^03[0-4][0-9]{8}$";
+            return System.Text.RegularExpressions.Regex.IsMatch(phone, phonePattern);
+        }
 
         private void ADDBUTTON_Click(object sender, EventArgs e)
         {
@@ -42,7 +52,17 @@ namespace sample.Forms
             string Reg = RegNum.Text;
             string First = FirstName.Text;
             string Last = LastNames.Text;
+            if (!isValidEmail(emails.Text))
+            {
+                MessageBox.Show("Invalid Email");
+                return;
+            }
             string Email = emails.Text;
+            if (!isValidPhone(Contactno.Text))
+            {
+                MessageBox.Show("Invalid Phone Number");
+                return;
+            }
             string Phone = Contactno.Text;
             bool active = StatusCheckBox.Checked;
             bool success = StudentDL.AddStudent(First, Last, Phone, Email, Reg, active);
@@ -78,6 +98,16 @@ namespace sample.Forms
             string reg = RegNum.Text;
             string first = FirstName.Text;
             string last = LastNames.Text;
+            if (!isValidPhone(Contactno.Text))
+            {
+                MessageBox.Show("Invalid Phone Number");
+                return;
+            }
+            if (!isValidEmail(emails.Text))
+            {
+                MessageBox.Show("Invalid Email");
+                return;
+            }
             string email = emails.Text;
             string phone = Contactno.Text;
             bool active = StatusCheckBox.Checked;
