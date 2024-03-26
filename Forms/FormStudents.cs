@@ -49,20 +49,25 @@ namespace sample.Forms
                 MessageBox.Show("Please Fill All Fields");
                 return;
             }
-            string Reg = RegNum.Text;
-            string First = FirstName.Text;
-            string Last = LastNames.Text;
             if (!isValidEmail(emails.Text))
             {
                 MessageBox.Show("Invalid Email");
                 return;
             }
-            string Email = emails.Text;
             if (!isValidPhone(Contactno.Text))
             {
                 MessageBox.Show("Invalid Phone Number");
                 return;
             }
+            if (StudentDL.IsStudentExist(RegNum.Text))
+            {
+                MessageBox.Show("Student Already Exist");
+                return;
+            }
+            string Reg = RegNum.Text;
+            string First = FirstName.Text;
+            string Last = LastNames.Text;
+            string Email = emails.Text;
             string Phone = Contactno.Text;
             bool active = StatusCheckBox.Checked;
             bool success = StudentDL.AddStudent(First, Last, Phone, Email, Reg, active);
@@ -95,9 +100,6 @@ namespace sample.Forms
                 MessageBox.Show("Please Select a Row First");
                 return;
             }
-            string reg = RegNum.Text;
-            string first = FirstName.Text;
-            string last = LastNames.Text;
             if (!isValidPhone(Contactno.Text))
             {
                 MessageBox.Show("Invalid Phone Number");
@@ -108,6 +110,9 @@ namespace sample.Forms
                 MessageBox.Show("Invalid Email");
                 return;
             }
+            string reg = RegNum.Text;
+            string first = FirstName.Text;
+            string last = LastNames.Text;
             string email = emails.Text;
             string phone = Contactno.Text;
             bool active = StatusCheckBox.Checked;

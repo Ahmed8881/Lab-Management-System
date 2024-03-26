@@ -65,5 +65,12 @@ namespace MID.DL
             query = query.Replace("@RegNo", RegistrationNumber);
             return DBConfig.GetData(query);
         }
+        public static bool IsStudentExist(string RegistrationNumber)
+        {
+            string query = "SELECT * FROM Student WHERE RegistrationNumber = '@RegNo'";
+            query = query.Replace("@RegNo", RegistrationNumber);
+            DataTable dt = DBConfig.GetData(query);
+            return dt.Rows.Count > 0;
+        }
     }
 }
