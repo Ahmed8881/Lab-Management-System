@@ -47,6 +47,7 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
+            button1 = new Button();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             panelDesktopPanel.SuspendLayout();
@@ -56,6 +57,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(51, 51, 76);
+            panelMenu.Controls.Add(button1);
             panelMenu.Controls.Add(Reports);
             panelMenu.Controls.Add(A);
             panelMenu.Controls.Add(button6);
@@ -348,6 +350,27 @@
             label2.TabIndex = 0;
             label2.Text = "LAB MANAGMENT ";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(51, 51, 76);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Gainsboro;
+            button1.Image = Properties.Resources.icons8_close_64;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(0, 608);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Padding = new Padding(10, 0, 0, 0);
+            button1.Size = new Size(196, 98);
+            button1.TabIndex = 11;
+            button1.Text = "Exit";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -388,5 +411,6 @@
         private Button A;
         private Button Reports;
         private Button btnCloseChildForm;
+        private Button button1;
     }
 }

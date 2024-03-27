@@ -198,6 +198,12 @@ namespace sample
         {
             OpenChildForm(new Forms.Attendence(), sender);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
+        }
     }
 
 }
