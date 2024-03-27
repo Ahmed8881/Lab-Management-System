@@ -15,6 +15,7 @@ namespace sample.Forms
         public ASSESSMENTS()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void LoadData()

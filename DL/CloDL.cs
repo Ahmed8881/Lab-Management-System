@@ -43,7 +43,8 @@ namespace MID.DL
         }
         public static bool isCloExist(string Name)
         {
-            string query = "SELECT * FROM Clo WHERE Name = @Name";
+            string query = "SELECT * FROM Clo WHERE Name ='@Name'";
+            query = query.Replace("@Name", Name);
             DataTable dt = DBConfig.GetData(query);
             return dt.Rows.Count > 0;
         }
