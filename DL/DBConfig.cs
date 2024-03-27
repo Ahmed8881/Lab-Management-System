@@ -32,28 +32,55 @@ namespace MID.DL
         }
         public DataTable GetData(string query)
         {
-            OpenConnection();
-            Adapter = new SqlDataAdapter(query, Connection);
-            Table = new DataTable();
-            Adapter.Fill(Table);
-            Connection.Close();
-            return Table;
+            try
+            {
+                OpenConnection();
+                Adapter = new SqlDataAdapter(query, Connection);
+                Table = new DataTable();
+                Adapter.Fill(Table);
+                Connection.Close();
+                return Table;
+            }
+            catch(Exception ex)
+            {
+                Connection.Close();
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
         public bool ExecuteCommand(string query)
         {
-            Connection.Open();
-            Command = new SqlCommand(query, Connection);
-            int RowsAffected = Command.ExecuteNonQuery();
-            Connection.Close();
-            return RowsAffected > 0;
+            try
+            {
+                Connection.Open();
+                Command = new SqlCommand(query, Connection);
+                int RowsAffected = Command.ExecuteNonQuery();
+                Connection.Close();
+                return RowsAffected > 0;
+            }
+            catch(Exception ex)
+            {
+                   Connection.Close();
+                MessageBox.Show(ex.Message);
+                return false;
+            }
         }
         public bool ExecuteCommand(SqlCommand cmd)
         {
-            Connection.Open();
-            cmd.Connection = Connection;
-            int RowsAffected = cmd.ExecuteNonQuery();
-            Connection.Close();
-            return RowsAffected > 0;
+            try
+            {
+                Connection.Open();
+                cmd.Connection = Connection;
+                int RowsAffected = cmd.ExecuteNonQuery();
+                Connection.Close();
+                return RowsAffected > 0;
+            }
+            catch(Exception ex)
+            {
+                Connection.Close();
+                MessageBox.Show(ex.Message);
+                return false;
+            }
         }
         public SqlConnection GetConnection()
         {
