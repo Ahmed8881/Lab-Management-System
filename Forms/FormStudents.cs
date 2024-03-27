@@ -41,12 +41,22 @@ namespace sample.Forms
             string phonePattern = @"^03[0-4][0-9]{8}$";
             return System.Text.RegularExpressions.Regex.IsMatch(phone, phonePattern);
         }
+        private bool isValidRegNo(string regNo)
+        {
+            string pattern = @"^\d{4}-[A-Z]{2}-\d{2,3}$";   
+            return System.Text.RegularExpressions.Regex.IsMatch(regNo, pattern);
+        }
 
         private void ADDBUTTON_Click(object sender, EventArgs e)
         {
             if (AreAllFieldEmpty())
             {
                 MessageBox.Show("Please Fill All Fields");
+                return;
+            }
+            if (!isValidRegNo(RegNum.Text))
+            {
+                MessageBox.Show("Invalid Registration Number");
                 return;
             }
             if (!isValidEmail(emails.Text))
@@ -98,6 +108,11 @@ namespace sample.Forms
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Please Select a Row First");
+                return;
+            }
+            if (!isValidRegNo(RegNum.Text))
+            {
+                MessageBox.Show("Invalid Registration Number");
                 return;
             }
             if (!isValidPhone(Contactno.Text))
