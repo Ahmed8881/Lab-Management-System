@@ -46,4 +46,3 @@ Build and Run
 
 3-Open the solution file (.sln) in Visual Studio.
 Build the solution and run the application.
-![Screenshot 2024-08-17 152951](https://github.com/user-attachments/assets/66ecfd1c-5dc7-4edb-b336-de2020432df0)
