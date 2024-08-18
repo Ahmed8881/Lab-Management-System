@@ -7,6 +7,7 @@ Welcome to the GitHub repository for the Lab Management System project. This des
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
+-[Database](#Database)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,3 +34,15 @@ To set up the Lab Management System locally, follow these steps:
 
    ```bash
    git clone https://github.com/Ahmed8881/DB-MID-PROJECT.git
+
+## Database
+
+**Create a new SQL Server database.**
+1-Execute the SQL scripts provided in the schema.sql file to create tables and populate initial data.
+Configure the Application
+
+2-Update the database connection string in the application settings to point to your local SQL Server instance.
+Build and Run
+
+3-Open the solution file (.sln) in Visual Studio.
+Build the solution and run the application.
