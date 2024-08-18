@@ -1,5 +1,7 @@
 # Lab Management System
 
+![Lab Management](https://github.com/user-attachments/assets/1c516efc-b54d-42a5-89ea-82a3abc3a19e)
+
 Welcome to the GitHub repository for the Lab Management System project. This desktop application is built using C# WinForms and SQL Server to manage various aspects of laboratory operations. The system supports comprehensive management of assessments, rubrics, results, reports, and attendance with complete CRUD (Create, Read, Update, Delete) functionality.
 
 ## Table of Contents
